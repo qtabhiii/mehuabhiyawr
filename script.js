@@ -151,7 +151,7 @@ moveNoButton();
     // MOVE NO BUTTON
     // ===============================
 
-    function moveNoButton(){
+   function moveNoButton(){
 
     if(!noButton) return;
 
@@ -159,29 +159,32 @@ moveNoButton();
     noButton.classList.add("catch-mode");
 
 
-    const padding = 30;
+    const box = document.querySelector(".proposal-box");
 
 
-    const maxX =
-    window.innerWidth - noButton.offsetWidth - padding;
+    const boxRect = box.getBoundingClientRect();
 
 
-    const maxY =
-    window.innerHeight - noButton.offsetHeight - padding;
+    const buttonWidth = noButton.offsetWidth;
+    const buttonHeight = noButton.offsetHeight;
 
 
-
-    let x = Math.random()*maxX;
-    let y = Math.random()*maxY;
+    const maxX = boxRect.width - buttonWidth - 20;
+    const maxY = boxRect.height - buttonHeight - 20;
 
 
 
-    noButton.style.left =
-    Math.max(padding,x)+"px";
+    const randomX = Math.random() * maxX;
+    const randomY = Math.random() * maxY;
 
 
-    noButton.style.top =
-    Math.max(padding,y)+"px";
+
+    noButton.style.position="absolute";
+
+
+    noButton.style.left=randomX+"px";
+
+    noButton.style.top=randomY+"px";
 
 
 }

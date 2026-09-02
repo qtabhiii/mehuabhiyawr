@@ -59,8 +59,13 @@ button{
 
 button:active{
 
-    transform:
-    scale(.96);
+    transform:scale(.96);
+
+}
+
+#noButton:active{
+
+    transform:none !important;
 
 }
 
@@ -399,11 +404,30 @@ to{
 
 
 
+#noButton {
+    background: #f3f3f3;
+    color: #555;
+}
+
+#noButton:hover {
+    background: #e9e9e9;
+}
 #noButton{
 
-    background:#f3f3f3;
+    position:absolute;
 
-    color:#555;
+    transition:
+    left .35s ease,
+    top .35s ease;
+
+    transform:none !important;
+
+}
+
+
+#noButton:hover {
+
+    transform: none !important;
 
 }
 
@@ -765,11 +789,15 @@ margin-bottom:25px;
 
 .proposal-buttons{
 
-display:flex;
+    position:relative;
 
-justify-content:center;
+    display:flex;
 
-gap:15px;
+    justify-content:center;
+
+    gap:15px;
+
+    min-height:60px;
 
 }
 /* =====================================================
