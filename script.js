@@ -99,14 +99,6 @@ noButton.innerHTML="Catch me 😂";
 
 moveNoButton();
 
-
-setInterval(()=>{
-
-moveNoButton();
-
-},1500);
-
-
 }
 
 
@@ -156,36 +148,22 @@ moveNoButton();
     if(!noButton) return;
 
 
-    noButton.classList.add("catch-mode");
+    const padding = 10;
 
 
-    const box = document.querySelector(".proposal-box");
-
-
-    const boxRect = box.getBoundingClientRect();
-
-
-    const buttonWidth = noButton.offsetWidth;
-    const buttonHeight = noButton.offsetHeight;
-
-
-    const maxX = boxRect.width - buttonWidth - 20;
-    const maxY = boxRect.height - buttonHeight - 20;
-
+    const maxX = window.innerWidth - noButton.offsetWidth - padding;
+    const maxY = window.innerHeight - noButton.offsetHeight - padding;
 
 
     const randomX = Math.random() * maxX;
     const randomY = Math.random() * maxY;
 
 
+    noButton.style.position = "fixed";
 
-    noButton.style.position="absolute";
+    noButton.style.left = randomX + "px";
 
-
-    noButton.style.left=randomX+"px";
-
-    noButton.style.top=randomY+"px";
-
+    noButton.style.top = randomY + "px";
 
 }
 
