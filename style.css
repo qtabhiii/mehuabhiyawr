@@ -2787,3 +2787,427 @@ body.dark-romance #musicButton {
     }
 
 }
+/* =====================================
+   🐱 PREMIUM KITTY EFFECT
+===================================== */
+
+.kitty{
+    animation:
+    kittyFloat 3s ease-in-out infinite,
+    kittyBreathing 2.5s ease-in-out infinite;
+    cursor:pointer;
+    transition:0.4s ease;
+}
+
+
+.kitty:hover{
+
+    transform:
+    scale(1.08);
+
+    filter:
+    drop-shadow(
+    0 15px 25px rgba(233,30,99,0.35)
+    );
+
+}
+
+
+/* cute breathing */
+
+@keyframes kittyBreathing{
+
+    0%,
+    100%{
+        filter:
+        brightness(1);
+    }
+
+
+    50%{
+        filter:
+        brightness(1.12);
+    }
+
+}
+
+
+/* happy jump */
+
+.kitty-happy{
+
+    animation:
+    kittyJump 0.8s ease,
+    kittyFloat 3s ease-in-out infinite;
+
+}
+
+
+@keyframes kittyJump{
+
+
+    0%{
+        transform:scale(1);
+    }
+
+
+    30%{
+        transform:
+        scale(1.15)
+        translateY(-25px)
+        rotate(-5deg);
+    }
+
+
+    60%{
+        transform:
+        scale(1.05)
+        translateY(5px)
+        rotate(5deg);
+    }
+
+
+    100%{
+        transform:
+        scale(1);
+    }
+
+}
+/* =====================================================
+   ❤️ VERSION 2 ROMANTIC CINEMATIC UPGRADE
+===================================================== */
+
+
+/* ===============================
+   🌸 PREMIUM BACKGROUND GLOW
+=============================== */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+    radial-gradient(
+        circle at 20% 20%,
+        rgba(233,30,99,0.15),
+        transparent 35%
+    ),
+    radial-gradient(
+        circle at 80% 80%,
+        rgba(255,105,180,0.12),
+        transparent 35%
+    );
+
+    animation:
+    backgroundMove 8s infinite alternate;
+
+}
+
+
+@keyframes backgroundMove{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.15);
+    }
+
+}
+
+
+
+/* ===============================
+   💌 PROPOSAL CARD PREMIUM
+=============================== */
+
+
+.proposal-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+.proposal-box::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-100%;
+
+    left:-100%;
+
+    width:50%;
+
+    height:300%;
+
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        rgba(255,255,255,0.7),
+        transparent
+    );
+
+
+    transform:
+    rotate(25deg);
+
+
+    animation:
+    cardShine 6s infinite;
+
+}
+
+
+
+@keyframes cardShine{
+
+
+    0%{
+        left:-120%;
+    }
+
+
+    30%{
+        left:150%;
+    }
+
+
+    100%{
+        left:150%;
+    }
+
+}
+
+
+
+/* ===============================
+   🐱 KITTY PREMIUM ENTRY
+=============================== */
+
+
+.kitty{
+
+    animation:
+
+    kittyEntrance 1.5s ease,
+
+    kittyFloat 3s ease-in-out infinite;
+
+}
+
+
+
+@keyframes kittyEntrance{
+
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateX(-80px)
+        scale(.7);
+
+    }
+
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateX(0)
+        scale(1);
+
+    }
+
+}
+
+
+
+
+/* ===============================
+   ❤️ BUTTON PREMIUM
+=============================== */
+
+
+#yesButton{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+
+
+#yesButton::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.5),
+        transparent
+    );
+
+
+    transform:
+    translateX(-100%);
+
+
+    animation:
+    buttonGlow 3s infinite;
+
+}
+
+
+
+@keyframes buttonGlow{
+
+
+    30%{
+
+        transform:
+        translateX(100%);
+
+    }
+
+
+    100%{
+
+        transform:
+        translateX(100%);
+
+    }
+
+}
+
+
+
+
+#noButton{
+
+    transition:
+    .3s ease;
+
+}
+
+
+
+#noButton:hover{
+
+    transform:
+    rotate(5deg);
+
+}
+
+
+
+/* ===============================
+   💕 FLOATING MINI HEARTS
+=============================== */
+
+
+.proposal-screen::after{
+
+    content:"❤️  💕  ❤️  💗";
+
+    position:fixed;
+
+    bottom:-50px;
+
+    left:50%;
+
+
+    font-size:30px;
+
+    opacity:.3;
+
+
+    animation:
+    floatingLove 8s infinite;
+
+
+    pointer-events:none;
+
+}
+
+
+
+@keyframes floatingLove{
+
+
+    from{
+
+        transform:
+        translateY(0);
+
+    }
+
+
+    to{
+
+        transform:
+        translateY(-120vh);
+
+    }
+
+}
+
+
+
+
+/* ===============================
+   📱 MOBILE POLISH
+=============================== */
+
+
+@media(max-width:700px){
+
+
+.proposal-content{
+
+    gap:40px;
+
+}
+
+
+.kitty{
+
+    width:170px;
+
+}
+
+
+.proposal-box{
+
+    box-shadow:
+
+    0 25px 70px
+    rgba(233,30,99,.25);
+
+}
+
+
+}
