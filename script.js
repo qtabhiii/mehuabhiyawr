@@ -105,13 +105,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if(kitty){
 
-                kitty.classList.remove("kitty-sad");
+    kitty.classList.remove(
+        "kitty-sad"
+    );
 
-                void kitty.offsetWidth;
+    void kitty.offsetWidth;
 
-                kitty.classList.add("kitty-sad");
+    kitty.classList.add(
+        "kitty-sad"
+    );
 
-            }
+
+    setTimeout(()=>{
+
+        kitty.classList.remove(
+            "kitty-sad"
+        );
+
+
+    },500);
+
+
+}
 
 
 
@@ -130,24 +145,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function moveNoButton(){
 
-
-        if(!noButton) return;
-
-
-        noButton.style.position="fixed";
+    if(!noButton) return;
 
 
-        let x=Math.random()*(window.innerWidth-120);
-
-        let y=Math.random()*(window.innerHeight-80);
+    noButton.style.position = "fixed";
 
 
-        noButton.style.left=x+"px";
+    const buttonWidth = noButton.offsetWidth;
+    const buttonHeight = noButton.offsetHeight;
 
-        noButton.style.top=y+"px";
+
+    let x = Math.random() * 
+    (window.innerWidth - buttonWidth - 40);
 
 
-    }
+    let y = Math.random() * 
+    (window.innerHeight - buttonHeight - 40);
+
+
+
+    noButton.style.left = Math.max(20,x)+"px";
+    noButton.style.top = Math.max(20,y)+"px";
+
+
+    noButton.style.transition =
+    "all 0.3s ease";
+
+
+}
 
     // =========================================
 // 📅 SHOW DATE SCREEN
