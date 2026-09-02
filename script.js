@@ -159,24 +159,29 @@ moveNoButton();
     noButton.classList.add("catch-mode");
 
 
-    let buttonWidth = noButton.offsetWidth;
-    let buttonHeight = noButton.offsetHeight;
+    const padding = 30;
 
 
-    let maxX = window.innerWidth - buttonWidth - 40;
-    let maxY = window.innerHeight - buttonHeight - 40;
+    const maxX =
+    window.innerWidth - noButton.offsetWidth - padding;
+
+
+    const maxY =
+    window.innerHeight - noButton.offsetHeight - padding;
+
 
 
     let x = Math.random()*maxX;
     let y = Math.random()*maxY;
 
 
+
     noButton.style.left =
-    Math.max(20,x)+"px";
+    Math.max(padding,x)+"px";
 
 
     noButton.style.top =
-    Math.max(20,y)+"px";
+    Math.max(padding,y)+"px";
 
 
 }

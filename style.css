@@ -2,2974 +2,653 @@
    💕 RESET
 ===================================================== */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-    min-height: 100vh;
-    font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(
+body{
+
+    min-height:100vh;
+
+    font-family:
+    Arial,
+    Helvetica,
+    sans-serif;
+
+    background:
+    linear-gradient(
         135deg,
         #fff0f5,
         #ffe4ec,
         #fff7fa
     );
-    color: #333;
-    overflow-x: hidden;
+
+    color:#333;
+
+    overflow-x:hidden;
+
     transition:
-        background 0.5s ease,
-        color 0.5s ease;
+    background .5s ease,
+    color .5s ease;
+
 }
 
+
 button,
-input {
-    font-family: inherit;
+input{
+    font-family:inherit;
 }
+
+
+button{
+
+    border:none;
+    cursor:pointer;
+
+    transition:
+    .3s ease;
+
+}
+
+
+button:active{
+
+    transform:
+    scale(.96);
+
+}
+
+
 
 
 /* =====================================================
-   💕 BACKGROUND HEARTS
+   ❤️ BACKGROUND HEARTS
 ===================================================== */
 
-.background-hearts {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    pointer-events: none;
-    overflow: hidden;
+
+.background-hearts{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
 }
 
-.background-hearts span {
-    position: absolute;
-    color: rgba(233, 30, 99, 0.12);
-    font-size: 35px;
-    animation: backgroundHeartFloat 8s ease-in-out infinite;
+
+.background-hearts span{
+
+    position:absolute;
+
+    color:
+    rgba(233,30,99,.12);
+
+    font-size:35px;
+
+    animation:
+    heartFloat 8s ease-in-out infinite;
+
 }
 
-.background-hearts span:nth-child(1) {
-    left: 8%;
-    top: 15%;
-    animation-delay: 0s;
+
+.background-hearts span:nth-child(1){
+    left:8%;
+    top:15%;
 }
 
-.background-hearts span:nth-child(2) {
-    left: 22%;
-    top: 70%;
-    animation-delay: 1s;
+.background-hearts span:nth-child(2){
+    left:22%;
+    top:70%;
+    animation-delay:1s;
 }
 
-.background-hearts span:nth-child(3) {
-    left: 40%;
-    top: 20%;
-    animation-delay: 2s;
+.background-hearts span:nth-child(3){
+    left:40%;
+    top:20%;
+    animation-delay:2s;
 }
 
-.background-hearts span:nth-child(4) {
-    left: 60%;
-    top: 75%;
-    animation-delay: 3s;
+.background-hearts span:nth-child(4){
+    left:60%;
+    top:75%;
+    animation-delay:3s;
 }
 
-.background-hearts span:nth-child(5) {
-    left: 75%;
-    top: 15%;
-    animation-delay: 4s;
+.background-hearts span:nth-child(5){
+    left:75%;
+    top:15%;
+    animation-delay:4s;
 }
 
-.background-hearts span:nth-child(6) {
-    left: 88%;
-    top: 55%;
-    animation-delay: 2s;
+.background-hearts span:nth-child(6){
+    left:88%;
+    top:55%;
 }
 
-.background-hearts span:nth-child(7) {
-    left: 50%;
-    top: 45%;
-    animation-delay: 1s;
+.background-hearts span:nth-child(7){
+    left:50%;
+    top:45%;
 }
 
-.background-hearts span:nth-child(8) {
-    left: 5%;
-    top: 50%;
-    animation-delay: 3s;
+.background-hearts span:nth-child(8){
+    left:5%;
+    top:50%;
 }
 
-@keyframes backgroundHeartFloat {
 
-    0%,
-    100% {
-        transform: translateY(0) rotate(0deg);
+@keyframes heartFloat{
+
+    0%,100%{
+
+        transform:
+        translateY(0)
+        rotate(0);
+
     }
 
-    50% {
-        transform: translateY(-25px) rotate(10deg);
+
+    50%{
+
+        transform:
+        translateY(-25px)
+        rotate(10deg);
+
     }
+
 }
+
+
+
 
 
 /* =====================================================
    🌸 MAIN CONTAINER
 ===================================================== */
 
-.container {
-    position: relative;
-    z-index: 2;
 
-    width: min(100%, 1100px);
-    min-height: 100vh;
+.container{
 
-    margin: 0 auto;
-    padding: 40px 25px;
+    position:relative;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    z-index:2;
+
+    width:min(1100px,100%);
+
+    min-height:100vh;
+
+    margin:auto;
+
+    padding:40px 25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
 }
+
+
+
 
 
 /* =====================================================
    🌸 OPENING SCREEN
 ===================================================== */
 
-.opening-screen {
-    position: fixed;
-    inset: 0;
-    z-index: 10000;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.opening-screen{
 
-    padding: 25px;
+    position:fixed;
+
+    inset:0;
+
+    z-index:10000;
+
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+
+    padding:25px;
+
 
     background:
-        radial-gradient(
-            circle at center,
-            rgba(255, 255, 255, 0.8),
-            transparent 45%
-        ),
-        linear-gradient(
-            135deg,
-            #fff0f5,
-            #ffdce8,
-            #fff7fa
-        );
+
+    linear-gradient(
+        135deg,
+        #fff0f5,
+        #ffdce8,
+        #fff7fa
+    );
+
 
     transition:
-        opacity 0.8s ease,
-        visibility 0.8s ease;
+
+    opacity .8s ease,
+    visibility .8s ease;
+
 }
 
-.opening-screen.opening-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+
+
+.opening-screen.opening-hidden{
+
+    opacity:0;
+
+    visibility:hidden;
+
+    pointer-events:none;
+
 }
 
-.opening-content {
-    width: min(500px, 100%);
-    text-align: center;
-    padding: 40px 25px;
 
-    animation: openingContentIn 1s ease both;
+
+
+.opening-content{
+
+    width:min(500px,100%);
+
+    text-align:center;
+
+    animation:
+    openingIn 1s ease both;
+
 }
 
-@keyframes openingContentIn {
 
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.95);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+
+@keyframes openingIn{
+
+
+from{
+
+    opacity:0;
+
+    transform:
+    translateY(30px)
+    scale(.95);
+
 }
 
-.opening-heart {
-    font-size: 75px;
-    margin-bottom: 20px;
-    animation: heartBeat 1.5s infinite;
+
+to{
+
+    opacity:1;
+
+    transform:
+    translateY(0)
+    scale(1);
+
 }
 
-.opening-content h1 {
-    color: #e91e63;
-    font-family: "Playfair Display", serif;
-    font-size: clamp(32px, 6vw, 55px);
-    margin-bottom: 15px;
+
 }
 
-.opening-content p {
-    color: #777;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 30px;
+
+
+.opening-heart{
+
+    font-size:75px;
+
+    margin-bottom:20px;
+
+    animation:
+    heartBeat 1.5s infinite;
+
 }
+
+
+
+.opening-content h1{
+
+    color:#e91e63;
+
+    font-family:
+    "Playfair Display",
+    serif;
+
+    font-size:
+    clamp(32px,6vw,55px);
+
+    margin-bottom:15px;
+
+}
+
+
+
+.opening-content p{
+
+    color:#777;
+
+    font-size:18px;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+}
+
+
+
 
 
 /* =====================================================
-   ❤️ COMMON BUTTON
+   ❤️ BUTTONS
 ===================================================== */
 
-button {
-    border: none;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-button:active {
-    transform: scale(0.96);
-}
 
 #enterButton,
 #yesButton,
-#noButton {
-    padding: 14px 28px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: 700;
+#noButton{
+
+    padding:
+    14px 28px;
+
+    border-radius:
+    50px;
+
+    font-size:16px;
+
+    font-weight:700;
+
 }
 
-#enterButton {
-    color: white;
-    background: #e91e63;
+
+
+#enterButton,
+#yesButton{
+
+    background:#e91e63;
+
+    color:white;
+
     box-shadow:
-        0 10px 25px rgba(233, 30, 99, 0.25);
+
+    0 10px 25px
+    rgba(233,30,99,.25);
+
 }
 
-#enterButton:hover {
-    transform: translateY(-3px) scale(1.03);
-    box-shadow:
-        0 15px 30px rgba(233, 30, 99, 0.35);
+
+
+#enterButton:hover,
+#yesButton:hover{
+
+    transform:
+    translateY(-3px)
+    scale(1.05);
+
 }
+
+
+
+
+#noButton{
+
+    background:#f3f3f3;
+
+    color:#555;
+
+}
+
+
+
 
 
 /* =====================================================
-   🐱 PROPOSAL
+   🐱 PROPOSAL SCREEN
 ===================================================== */
 
-.proposal-screen {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+.proposal-screen{
+
+    width:100%;
+
 }
 
-.proposal-content {
-    width: 100%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    gap: 90px;
+.proposal-content{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:90px;
+
 }
 
-.kitty-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+
+/* KITTY */
+
+
+.kitty-wrapper{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
 }
 
-.kitty {
-    width: 240px;
-    max-width: 35vw;
-    object-fit: contain;
+
+
+.kitty{
+
+    width:240px;
+
+    max-width:35vw;
+
+    object-fit:contain;
+
+    cursor:pointer;
+
 
     animation:
-        kittyFloat 3s ease-in-out infinite;
+
+    kittyEntrance 1.2s ease,
+
+    kittyFloat 3s ease-in-out infinite;
+
 }
 
-@keyframes kittyFloat {
 
-    0%,
-    100% {
-        transform: translateY(0);
-    }
 
-    50% {
-        transform: translateY(-12px);
-    }
+
+@keyframes kittyEntrance{
+
+
+from{
+
+opacity:0;
+
+transform:
+translateX(-80px)
+scale(.7);
+
 }
 
-.kitty-happy {
+
+to{
+
+opacity:1;
+
+transform:
+translateX(0)
+scale(1);
+
+}
+
+
+}
+
+
+
+@keyframes kittyFloat{
+
+
+0%,100%{
+
+transform:
+translateY(0);
+
+}
+
+
+50%{
+
+transform:
+translateY(-12px);
+
+}
+
+
+}
+
+
+
+
+.kitty-happy{
 
     animation:
-    kittyHappy 1s ease,
-    kittyFloat 3s ease-in-out 1s infinite;
+    kittyHappy .8s ease;
 
 }
 
 
-@keyframes kittyHappy {
-
-    0%{
-        transform:scale(1);
-    }
+@keyframes kittyHappy{
 
 
-    30%{
-        transform:
-        scale(1.2)
-        rotate(-8deg);
-    }
+0%{
+transform:scale(1);
+}
 
 
-    60%{
-        transform:
-        scale(1.05)
-        rotate(8deg);
-    }
+50%{
 
-
-    100%{
-        transform:
-        scale(1);
-    }
+transform:
+scale(1.15)
+rotate(5deg);
 
 }
 
-@keyframes kittyHappy {
 
-    0% {
-        transform: scale(1);
-    }
+100%{
 
-    40% {
-        transform:
-            scale(1.12)
-            rotate(-4deg);
-    }
+transform:
+scale(1);
 
-    70% {
-        transform:
-            scale(0.96)
-            rotate(4deg);
-    }
-
-    100% {
-        transform: scale(1);
-    }
 }
 
-.kitty-sad {
-    animation: kittySad 0.5s ease;
 }
 
-@keyframes kittySad {
 
-    0%,
-    100% {
-        transform: translateX(0);
-    }
 
-    25% {
-        transform: translateX(-8px);
-    }
 
-    75% {
-        transform: translateX(8px);
-    }
+.kitty-sad{
+
+animation:
+kittySad .5s ease;
+
 }
+
+
+
+@keyframes kittySad{
+
+
+0%,
+100%{
+
+transform:
+translateX(0);
+
+}
+
+
+25%{
+
+transform:
+translateX(-15px);
+
+}
+
+
+50%{
+
+transform:
+translateX(15px);
+
+}
+
+
+75%{
+
+transform:
+translateX(-10px);
+
+}
+
+
+}
+
+
 
 
 /* =====================================================
    💌 PROPOSAL CARD
 ===================================================== */
 
-.proposal-box {
-    width: min(430px, 100%);
-
-    padding: 35px 30px;
-
-    background: rgba(255, 255, 255, 0.92);
-
-    border-radius: 25px;
-
-    text-align: center;
-
-    box-shadow:
-        0 20px 50px rgba(233, 30, 99, 0.15);
-
-    backdrop-filter: blur(10px);
-
-    animation: proposalCardIn 1s ease both;
-}
-
-@keyframes proposalCardIn {
-
-    from {
-        opacity: 0;
-        transform: translateX(40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-.special-line {
-    color: #e91e63;
-    font-size: 10px;
-    font-weight: 800;
-    letter-spacing: 2px;
-    margin-bottom: 15px;
-}
-
-.proposal-box h1 {
-    color: #e91e63;
-    font-family: "Playfair Display", serif;
-    font-size: clamp(28px, 5vw, 42px);
-    margin-bottom: 15px;
-}
-
-.proposal-box h2 {
-    color: #444;
-    font-size: 20px;
-    line-height: 1.4;
-    margin-bottom: 12px;
-}
-
-.proposal-box p {
-    color: #777;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-.proposal-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-
-#yesButton {
-    background: #e91e63;
-    color: white;
-
-    box-shadow:
-        0 8px 20px rgba(233, 30, 99, 0.25);
-}
-
-#yesButton:hover {
-    transform: scale(1.08);
-}
-
-#noButton {
-    background: #f3f3f3;
-    color: #555;
-}
-
-#noButton:hover {
-    background: #e9e9e9;
-}
-
-
-/* =====================================================
-   ❤️ FLOATING HEARTS
-===================================================== */
-
-.floating-heart {
-    position: fixed;
-    bottom: -50px;
-    z-index: 9998;
-
-    font-size: 25px;
-
-    pointer-events: none;
-
-    animation:
-        floatingHeart 6s linear forwards;
-}
-
-@keyframes floatingHeart {
-
-    0% {
-        transform:
-            translateY(0)
-            scale(0.7)
-            rotate(0deg);
-
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
-    100% {
-        transform:
-            translateY(-110vh)
-            scale(1.2)
-            rotate(360deg);
-
-        opacity: 0;
-    }
-}
-
-
-/* =====================================================
-   📅 DATE SCREEN
-===================================================== */
-
-.date-screen {
-    width: min(650px, 100%);
-    text-align: center;
-    padding: 25px;
-
-    animation:
-        dateScreenIn 0.8s ease both;
-}
-
-@keyframes dateScreenIn {
-
-    from {
-        opacity: 0;
-        transform: translateY(30px) scale(0.96);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-
-.date-icon {
-    font-size: 65px;
-    margin-bottom: 10px;
-    animation: heartBeat 1.5s infinite;
-}
-
-.date-screen > h1 {
-    color: #e91e63;
-    font-family: "Playfair Display", serif;
-    font-size: clamp(32px, 6vw, 52px);
-    margin-bottom: 10px;
-}
-
-.date-screen > h2 {
-    color: #555;
-    margin-bottom: 10px;
-}
-
-.date-intro {
-    color: #777;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
-
-
-/* =====================================================
-   📅 DATE BOX
-===================================================== */
-
-.date-box {
-    background: rgba(255, 255, 255, 0.94);
-
-    padding: 30px;
-
-    border-radius: 25px;
-
-    box-shadow:
-        0 20px 50px rgba(233, 30, 99, 0.14);
-}
-
-.date-box h2 {
-    color: #e91e63;
-    margin-bottom: 25px;
-}
-
-.date-box label {
-    display: block;
-
-    text-align: left;
-
-    font-size: 14px;
-    font-weight: 700;
-
-    color: #555;
-
-    margin: 15px 0 7px;
-}
-
-.date-box input {
-    width: 100%;
-
-    padding: 14px;
-
-    border: 2px solid #f2c4d4;
-
-    border-radius: 12px;
-
-    background: white;
-
-    color: #333;
-
-    font-size: 16px;
-
-    outline: none;
-}
-
-.date-box input:focus {
-    border-color: #e91e63;
-
-    box-shadow:
-        0 0 0 4px rgba(233, 30, 99, 0.08);
-}
-
-#dateCuteMessage {
-    min-height: 25px;
-
-    margin-top: 15px;
-
-    color: #e91e63;
-
-    font-weight: 600;
-
-    line-height: 1.5;
-}
-
-.selected-date-preview {
-    margin-top: 15px;
-
-    padding: 15px;
-
-    background: rgba(233, 30, 99, 0.06);
-
-    border-radius: 15px;
-
-    color: #555;
-}
-
-.selected-date-preview span,
-.selected-time span {
-    display: block;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    color: #e91e63;
-
-    margin-bottom: 5px;
-}
-
-.selected-date-preview strong,
-.selected-time strong {
-    display: block;
-
-    color: #333;
-
-    font-size: 17px;
-}
-
-.selected-date-preview small,
-.selected-time small {
-    display: block;
-
-    margin-top: 5px;
-
-    color: #888;
-}
-
-
-/* =====================================================
-   ⏰ SELECTED TIME
-===================================================== */
-
-.selected-time {
-    display: block !important;
-
-    margin-top: 10px;
-
-    padding: 12px 15px;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    text-align: center;
-
-    color: #e91e63;
-
-    background: rgba(233, 30, 99, 0.08);
-
-    border-radius: 12px;
-
-    border: 1px solid rgba(233, 30, 99, 0.15);
-
-    animation:
-        timePreviewPop 0.4s ease both;
-}
-
-@keyframes timePreviewPop {
-
-    from {
-        opacity: 0;
-        transform:
-            translateY(8px)
-            scale(0.95);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            translateY(0)
-            scale(1);
-    }
-}
-
-#confirmDate {
-    width: 100%;
-
-    margin-top: 22px;
-
-    padding: 15px;
-
-    border-radius: 50px;
-
-    background: #e91e63;
-
-    color: white;
-
-    font-size: 15px;
-    font-weight: 800;
-
-    box-shadow:
-        0 10px 25px rgba(233, 30, 99, 0.25);
-}
-
-#confirmDate:hover {
-    transform: translateY(-3px);
-}
-
-#confirmDate:disabled {
-    cursor: wait;
-    opacity: 0.8;
-}
-
-
-/* =====================================================
-   🎬 BOOKING OVERLAY
-===================================================== */
-
-.booking-overlay {
-    position: fixed;
-    inset: 0;
-
-    z-index: 50000;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    padding: 25px;
-
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(233, 30, 99, 0.18),
-            transparent 40%
-        ),
-        rgba(20, 5, 12, 0.97);
-
-    opacity: 0;
-    visibility: hidden;
-
-    transition:
-        opacity 0.7s ease,
-        visibility 0.7s ease;
-}
-
-.booking-overlay.show-booking {
-    opacity: 1;
-    visibility: visible;
-}
-
-.booking-content {
-    text-align: center;
-    color: white;
-
-    animation:
-        bookingContentIn 1s ease both;
-}
-
-@keyframes bookingContentIn {
-
-    from {
-        opacity: 0;
-        transform:
-            scale(0.75)
-            translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            scale(1)
-            translateY(0);
-    }
-}
-
-.booking-heart {
-    font-size: 90px;
-    animation: heartBeat 1.2s infinite;
-}
-
-.booking-content h1 {
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(30px, 6vw, 58px);
-
-    line-height: 1.15;
-
-    color: #ffb3cc;
-
-    margin: 20px 0;
-}
-
-.booking-content p {
-    color: #eee;
-    font-size: 18px;
-}
-
-.booking-hearts {
-    margin-top: 30px;
-
-    font-size: 25px;
-
-    animation:
-        fadePulse 2s infinite;
-}
-
-
-/* =====================================================
-   🎟️ FINAL DATE PASS
-===================================================== */
-
-.confirmed-date {
-    width: min(600px, 100%);
-
-    text-align: center;
-
-    padding: 20px;
-
-    animation:
-        finalScreenEnter 1s ease both;
-}
-
-@keyframes finalScreenEnter {
-
-    from {
-        opacity: 0;
-        transform:
-            scale(0.92)
-            translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            scale(1)
-            translateY(0);
-    }
-}
-
-.date-pass {
-    position: relative;
-
-    overflow: hidden;
-
-    width: 100%;
-
-    padding: 30px;
-
-    border-radius: 22px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #ffffff,
-            #fff5f8
-        );
-
-    border:
-        2px solid rgba(233, 30, 99, 0.18);
-
-    box-shadow:
-        0 25px 60px rgba(233, 30, 99, 0.18),
-        0 8px 25px rgba(0, 0, 0, 0.08);
-
-    animation:
-        cinematicTicketDrop 1.2s ease both;
-}
-
-@keyframes cinematicTicketDrop {
-
-    0% {
-        opacity: 0;
-
-        transform:
-            perspective(1200px)
-            translateY(-100px)
-            rotateX(-35deg)
-            scale(0.7);
-
-        filter: blur(6px);
-    }
-
-    60% {
-        opacity: 1;
-
-        transform:
-            perspective(1200px)
-            translateY(10px)
-            rotateX(5deg)
-            scale(1.03);
-
-        filter: blur(0);
-    }
-
-    100% {
-        opacity: 1;
-
-        transform:
-            perspective(1200px)
-            translateY(0)
-            rotateX(0)
-            scale(1);
-
-        filter: blur(0);
-    }
-}
-
-.date-pass::before {
-    content: "♥";
-
-    position: absolute;
-
-    right: -35px;
-    bottom: -60px;
-
-    font-size: 220px;
-
-    color:
-        rgba(233, 30, 99, 0.035);
-
-    transform: rotate(-15deg);
-
-    pointer-events: none;
-}
-
-.date-pass::after {
-    content: "";
-
-    position: absolute;
-
-    top: -40%;
-    left: -120%;
-
-    width: 55%;
-    height: 180%;
-
-    background:
-        linear-gradient(
-            90deg,
-            transparent,
-            rgba(255, 255, 255, 0.55),
-            transparent
-        );
-
-    transform: skewX(-20deg);
-
-    animation:
-        ticketShine 5s ease-in-out infinite;
-
-    pointer-events: none;
-}
-
-@keyframes ticketShine {
-
-    0% {
-        left: -120%;
-    }
-
-    25% {
-        left: 150%;
-    }
-
-    100% {
-        left: 150%;
-    }
-}
-
-.date-pass > * {
-    position: relative;
-    z-index: 2;
-}
-
-.pass-top {
-    display: flex;
-
-    justify-content: space-between;
-
-    gap: 15px;
-
-    color: #e91e63;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 1.5px;
-
-    margin-bottom: 25px;
-}
-
-.pass-heart {
-    font-size: 65px;
-
-    animation:
-        heartBeat 1.5s infinite;
-}
-
-.date-pass h1 {
-    margin: 10px 0;
-
-    color: #e91e63;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(32px, 7vw, 50px);
-
-    letter-spacing: 2px;
-}
-
-.pass-subtitle {
-    color: #777;
-
-    line-height: 1.6;
-
-    margin-bottom: 25px;
-}
-
-.pass-subtitle::before {
-    content: "RESERVED FOR TWO 💕";
-
-    display: inline-block;
-
-    margin-bottom: 12px;
-
-    padding: 6px 13px;
-
-    border-radius: 50px;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 1.5px;
-
-    background:
-        rgba(233, 30, 99, 0.08);
-
-    color: #e91e63;
-
-    border:
-        1px solid rgba(233, 30, 99, 0.15);
-}
-
-.pass-line {
-    width: 100%;
-    height: 1px;
-
-    border-top:
-        1px dashed rgba(233, 30, 99, 0.25);
-
-    margin: 20px 0;
-}
-
-.pass-details {
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 12px;
-
-    text-align: left;
-}
-
-.pass-detail {
-    display: flex;
-
-    align-items: center;
-
-    gap: 15px;
-
-    padding: 13px;
-
-    border-left:
-        3px solid #e91e63;
-
-    border-radius: 8px;
-
-    transition:
-        transform 0.3s ease;
-}
-
-.pass-detail:hover {
-    transform: translateX(5px);
-
-    background:
-        rgba(233, 30, 99, 0.035);
-}
-
-.detail-icon {
-    font-size: 25px;
-}
-
-.pass-detail small {
-    display: block;
-
-    color: #aaa;
-
-    font-size: 10px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-
-    margin-bottom: 3px;
-}
-
-.pass-detail strong {
-    color: #333;
-
-    font-size: 15px;
-}
-
-.pass-message {
-    color: #666;
-
-    font-size: 15px;
-
-    line-height: 1.7;
-
-    font-style: italic;
-}
-
-.pass-footer {
-    position: relative;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    margin-top: 25px;
-
-    padding-top: 20px;
-
-    border-top:
-        1px dashed rgba(233, 30, 99, 0.25);
-
-    color: #e91e63;
-
-    font-size: 11px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-.pass-footer::before {
-    content: "DATE PASS • NO. 001";
-
-    position: absolute;
-
-    left: 50%;
-
-    transform:
-        translateX(-50%);
-
-    margin-top: 55px;
-
-    font-size: 8px;
-
-    letter-spacing: 2px;
-
-    opacity: 0.35;
-}
-
-.pass-footer::after {
-    content:
-        "|||| ||| | |||| || ||| |||| | |||";
-
-    position: absolute;
-
-    left: 50%;
-
-    transform:
-        translate(-50%, 40px);
-
-    font-family: monospace;
-
-    font-size: 15px;
-
-    letter-spacing: 2px;
-
-    color: #222;
-
-    opacity: 0.7;
-}
-
-
-/* =====================================================
-   ⏳ COUNTDOWN
-===================================================== */
-
-.countdown-box {
-    width: 100%;
-
-    margin-top: 25px;
-
-    padding: 25px 20px;
-
-    text-align: center;
-
-    background:
-        rgba(255, 255, 255, 0.9);
-
-    border-radius: 22px;
-
-    box-shadow:
-        0 15px 35px rgba(233, 30, 99, 0.1);
-
-    animation:
-        countdownCinematic
-        0.9s ease 0.4s both;
-}
-
-@keyframes countdownCinematic {
-
-    from {
-        opacity: 0;
-        transform:
-            translateY(25px)
-            scale(0.95);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            translateY(0)
-            scale(1);
-    }
-}
-
-.countdown-box h2 {
-    color: #e91e63;
-
-    font-size: 18px;
-
-    margin-bottom: 18px;
-}
-
-.countdown {
-    display: grid;
-
-    grid-template-columns:
-        repeat(4, 1fr);
-
-    gap: 10px;
-}
-
-.countdown div {
-    padding: 13px 5px;
-
-    background:
-        rgba(233, 30, 99, 0.06);
-
-    border-radius: 12px;
-}
-
-.countdown span {
-    display: block;
-
-    color: #e91e63;
-
-    font-size: 25px;
-
-    font-weight: 800;
-}
-
-.countdown small {
-    color: #888;
-
-    font-size: 9px;
-
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-
-/* =====================================================
-   💌 MESSAGE BUTTON
-===================================================== */
-
-.message-button {
-    margin-top: 25px;
-
-    padding: 15px 28px;
-
-    border-radius: 50px;
-
-    background: #e91e63;
-
-    color: white;
-
-    font-size: 15px;
-
-    font-weight: 800;
-
-    box-shadow:
-        0 10px 25px rgba(233, 30, 99, 0.25);
-
-    animation:
-        buttonCinematic
-        0.8s ease 0.7s both;
-}
-
-.message-button:hover {
-    transform:
-        translateY(-4px)
-        scale(1.03);
-}
-
-@keyframes buttonCinematic {
-
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* =====================================================
-   💌 CINEMATIC MESSAGE PAGE
-===================================================== */
-
-.message-page {
-    position: fixed;
-    inset: 0;
-
-    z-index: 60000;
-
-    overflow-y: auto;
-
-    min-height: 100vh;
-
-    padding: 45px 20px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    justify-content: center;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at top,
-            rgba(233, 30, 99, 0.18),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #fff1f6,
-            #ffe1eb,
-            #fff7fa
-        );
-
-    animation:
-        messagePageCinematicIn
-        1s cubic-bezier(
-            0.16,
-            1,
-            0.3,
-            1
-        ) both;
-}
-
-@keyframes messagePageCinematicIn {
-
-    0% {
-        opacity: 0;
-
-        transform:
-            scale(1.08)
-            translateY(25px);
-
-        filter: blur(10px);
-    }
-
-    55% {
-        opacity: 1;
-
-        filter: blur(0);
-    }
-
-    100% {
-        opacity: 1;
-
-        transform:
-            scale(1)
-            translateY(0);
-
-        filter: blur(0);
-    }
-}
-
-.message-page::before {
-    content: "";
-
-    position: absolute;
-
-    inset: 0;
-
-    pointer-events: none;
-
-    background:
-        radial-gradient(
-            circle at 20% 20%,
-            rgba(255, 255, 255, 0.8),
-            transparent 25%
-        );
-}
-
-.message-page-hearts {
-    position: relative;
-    z-index: 2;
-
-    font-size: 55px;
-
-    animation:
-        messageHeartEntrance
-        1s ease 0.3s both,
-        heartBeat 1.5s
-        1.3s infinite;
-}
-
-@keyframes messageHeartEntrance {
-
-    from {
-        opacity: 0;
-        transform:
-            scale(0.4)
-            translateY(-30px);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            scale(1)
-            translateY(0);
-    }
-}
-
-.message-small-title {
-    position: relative;
-    z-index: 2;
-
-    margin-top: 8px;
-
-    color: #e91e63;
-
-    font-size: 11px;
-
-    font-weight: 800;
-
-    letter-spacing: 3px;
-
-    animation:
-        messageTextIn
-        0.8s ease 0.5s both;
-}
-
-.message-page-title {
-    position: relative;
-    z-index: 2;
-
-    margin-top: 12px;
-
-    color: #333;
-
-    font-family: "Playfair Display", serif;
-
-    font-size: clamp(
-        27px,
-        6vw,
-        48px
-    );
-
-    line-height: 1.15;
-
-    animation:
-        messageTextIn
-        0.9s ease 0.65s both;
-}
-
-@keyframes messageTextIn {
-
-    from {
-        opacity: 0;
-        transform:
-            translateY(25px);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            translateY(0);
-    }
-}
-
-
-/* =====================================================
-   💌 ENVELOPE
-===================================================== */
-
-.envelope-wrapper {
-    position: relative;
-    z-index: 3;
-
-    width: min(430px, 90vw);
-
-    height: 330px;
-
-    margin: 30px auto 10px;
-
-    display: flex;
-
-    align-items: flex-end;
-
-    justify-content: center;
-
-    perspective: 1000px;
-
-    animation:
-        envelopeEntrance
-        1s ease 0.8s both;
-}
-
-@keyframes envelopeEntrance {
-
-    from {
-        opacity: 0;
-
-        transform:
-            translateY(50px)
-            scale(0.8);
-    }
-
-    to {
-        opacity: 1;
-
-        transform:
-            translateY(0)
-            scale(1);
-    }
-}
-
-.envelope {
-    position: relative;
-
-    width: 360px;
-
-    height: 230px;
-
-    max-width: 100%;
-
-    transform-style: preserve-3d;
-
-    filter:
-        drop-shadow(
-            0 25px 25px
-            rgba(0, 0, 0, 0.15)
-        );
-}
-
-.envelope-back {
-    position: absolute;
-
-    inset: 0;
-
-    z-index: 1;
-
-    border-radius: 8px;
-
-    background:
-        linear-gradient(
-            145deg,
-            #e91e63,
-            #c2185b
-        );
-
-    box-shadow:
-        0 20px 40px
-        rgba(0, 0, 0, 0.2);
-}
-
-.envelope-back::before,
-.envelope-back::after {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-
-    width: 50%;
-    height: 100%;
-
-    background:
-        rgba(255, 255, 255, 0.1);
-}
-
-.envelope-back::before {
-    left: 0;
-
-    clip-path:
-        polygon(
-            0 0,
-            100% 100%,
-            0 100%
-        );
-}
-
-.envelope-back::after {
-    right: 0;
-
-    clip-path:
-        polygon(
-            100% 0,
-            100% 100%,
-            0 100%
-        );
-}
-
-
-/* =====================================================
-   📜 LETTER
-===================================================== */
-
-.letter-paper {
-    position: absolute;
-
-    left: 5%;
-    bottom: 8px;
-
-    z-index: 2;
-
-    width: 90%;
-
-    min-height: 205px;
-
-    padding: 25px 20px;
-
-    background: #fffdf8;
-
-    border-radius: 5px;
-
-    box-shadow:
-        0 5px 15px
-        rgba(0, 0, 0, 0.12);
-
-    transform:
-        translateY(0);
-
-    transition:
-        transform
-        1.3s
-        cubic-bezier(
-            0.16,
-            1,
-            0.3,
-            1
-        );
-}
-
-.letter-content {
-    opacity: 0;
-
-    transform:
-        translateY(20px);
-
-    transition:
-        opacity 0.8s ease 0.6s,
-        transform 0.8s ease 0.6s;
-}
-
-.letter-heart {
-    font-size: 30px;
-}
-
-.letter-content h2 {
-    margin: 8px 0 12px;
-
-    color: #e91e63;
-
-    font-family:
-        "Playfair Display",
-        serif;
-
-    font-size: 20px;
-}
-
-.letter-content p {
-    margin: 8px 0;
-
-    color: #555;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-}
-
-.letter-sign {
-
-    margin-top: 25px;
-
-    color: #e91e63;
-
-    font-family: "Dancing Script", cursive;
-
-    font-size: 28px;
-
-    font-weight: 700;
-
-    font-style: italic;
-
-    text-align: right;
-
-    padding-right: 20px;
-
-}
-
-/* =====================================================
-   💌 ENVELOPE FLAP
-===================================================== */
-
-.envelope-flap {
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    z-index: 4;
-
-    width: 100%;
-    height: 58%;
-
-    background:
-        linear-gradient(
-            145deg,
-            #f02b70,
-            #d81b60
-        );
-
-    clip-path:
-        polygon(
-            0 0,
-            100% 0,
-            50% 100%
-        );
-
-    transform-origin:
-        top center;
-
-    transform:
-        rotateX(0deg);
-
-    transition:
-        transform
-        1.1s
-        cubic-bezier(
-            0.16,
-            1,
-            0.3,
-            1
-        );
-
-    backface-visibility:
-        hidden;
-}
-
-.envelope-flap span {
-    position: absolute;
-
-    top: 25px;
-    left: 50%;
-
-    transform:
-        translateX(-50%);
-
-    font-size: 35px;
-}
-
-
-/* =====================================================
-   💌 ENVELOPE OPEN STATE
-===================================================== */
-
-.envelope-open .envelope-flap {
-    transform:
-        rotateX(180deg);
-}
-
-.envelope-open .letter-paper {
-    transform:
-        translateY(-125px);
-}
-
-.envelope-open .letter-content {
-    opacity: 1;
-
-    transform:
-        translateY(0);
-}
-
-
-/* =====================================================
-   💌 MESSAGE BUTTONS
-===================================================== */
-
-.open-message-button {
-    position: relative;
-    z-index: 5;
-
-    margin-top: 25px;
-
-    padding: 15px 28px;
-
-    border-radius: 50px;
-
-    background: #e91e63;
-
-    color: white;
-
-    font-size: 15px;
-
-    font-weight: 800;
-
-    box-shadow:
-        0 10px 25px
-        rgba(233, 30, 99, 0.25);
-
-    animation:
-        buttonCinematic
-        0.8s ease 1s both;
-}
-
-.open-message-button:hover {
-    transform:
-        translateY(-3px)
-        scale(1.03);
-}
-
-.open-message-button:disabled {
-    opacity: 0.8;
-
-    cursor: default;
-}
-
-.back-ticket-button {
-    position: relative;
-    z-index: 5;
-
-    margin-top: 12px;
-
-    padding: 11px 20px;
-
-    border-radius: 50px;
-
-    background:
-        rgba(255, 255, 255, 0.8);
-
-    color: #e91e63;
-
-    border:
-        1px solid
-        rgba(233, 30, 99, 0.2);
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    animation:
-        backButtonIn
-        0.8s ease 1.2s both;
-}
-
-@keyframes backButtonIn {
-
-    from {
-        opacity: 0;
-        transform:
-            translateY(15px);
-    }
-
-    to {
-        opacity: 1;
-        transform:
-            translateY(0);
-    }
-}
-
-.back-ticket-button:hover {
-    background: white;
-
-    transform:
-        translateY(-2px);
-}
-
-
-/* =====================================================
-   🌙 DARK ROMANCE
-===================================================== */
-
-body.dark-romance {
-    background:
-        radial-gradient(
-            circle at top,
-            #3b1024,
-            #15070e 55%,
-            #090306
-        );
-
-    color: #eee;
-}
-
-body.dark-romance .opening-screen {
-    background:
-        radial-gradient(
-            circle at center,
-            rgba(80, 15, 45, 0.9),
-            transparent 50%
-        ),
-        linear-gradient(
-            135deg,
-            #17070e,
-            #2b0b19,
-            #090306
-        );
-}
-
-body.dark-romance .opening-content p {
-    color: #ccc;
-}
-
-body.dark-romance .proposal-box,
-body.dark-romance .date-box,
-body.dark-romance .countdown-box {
-    background:
-        rgba(35, 10, 20, 0.9);
-
-    color: #eee;
-}
-
-body.dark-romance .proposal-box h2 {
-    color: #eee;
-}
-
-body.dark-romance .proposal-box p,
-body.dark-romance .date-intro,
-body.dark-romance .pass-subtitle,
-body.dark-romance .pass-message {
-    color: #ccc;
-}
-
-body.dark-romance .proposal-box h1,
-body.dark-romance .date-screen > h1,
-body.dark-romance .date-box h2,
-body.dark-romance .date-pass h1,
-body.dark-romance .countdown-box h2 {
-    color: #ff80ab;
-}
-
-body.dark-romance .date-pass {
-    background:
-        linear-gradient(
-            145deg,
-            #25101a,
-            #160810
-        );
-
-    border-color:
-        rgba(255, 105, 160, 0.2);
-
-    box-shadow:
-        0 30px 80px
-        rgba(255, 70, 140, 0.25),
-
-        0 10px 35px
-        rgba(0, 0, 0, 0.35);
-}
-
-body.dark-romance .pass-detail strong {
-    color: #eee;
-}
-
-body.dark-romance .countdown-box {
-    box-shadow:
-        0 15px 40px
-        rgba(0, 0, 0, 0.3);
-}
-
-body.dark-romance .date-box input {
-    background: #24101a;
-    color: #eee;
-    border-color: #633047;
-}
-
-body.dark-romance .selected-date-preview,
-body.dark-romance .selected-time {
-    background:
-        rgba(233, 30, 99, 0.12);
-}
-
-body.dark-romance .selected-date-preview strong {
-    color: #eee;
-}
-
-body.dark-romance .message-page {
-    background:
-        radial-gradient(
-            circle at top,
-            rgba(233, 30, 99, 0.2),
-            transparent 35%
-        ),
-        linear-gradient(
-            135deg,
-            #17070e,
-            #2b0b19,
-            #090306
-        );
-}
-
-body.dark-romance .message-page-title {
-    color: #fff;
-}
-
-body.dark-romance .back-ticket-button {
-    background:
-        rgba(30, 10, 18, 0.9);
-
-    color: #ff80ab;
-}
-
-body.dark-romance .back-ticket-button:hover {
-    background:
-        rgba(50, 15, 30, 0.95);
-}
-
-
-/* =====================================================
-   🌙 / 🎵 CONTROL BUTTONS
-===================================================== */
-
-#darkModeButton,
-#musicButton {
-    position: fixed;
-
-    top: 20px;
-
-    z-index: 70000;
-
-    width: 45px;
-    height: 45px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(255, 255, 255, 0.85);
-
-    box-shadow:
-        0 5px 20px
-        rgba(0, 0, 0, 0.1);
-
-    font-size: 20px;
-}
-
-#darkModeButton {
-    right: 20px;
-}
-
-#musicButton {
-    right: 75px;
-}
-
-#darkModeButton:hover,
-#musicButton:hover {
-    transform:
-        scale(1.08);
-}
-
-body.dark-romance #darkModeButton,
-body.dark-romance #musicButton {
-    background:
-        rgba(40, 15, 25, 0.9);
-
-    color: white;
-}
-
-
-/* =====================================================
-   💓 ANIMATIONS
-===================================================== */
-
-@keyframes heartBeat {
-
-    0%,
-    100% {
-        transform: scale(1);
-    }
-
-    25% {
-        transform: scale(1.08);
-    }
-
-    40% {
-        transform: scale(0.98);
-    }
-
-    60% {
-        transform: scale(1.12);
-    }
-}
-
-@keyframes fadePulse {
-
-    0%,
-    100% {
-        opacity: 0.5;
-    }
-
-    50% {
-        opacity: 1;
-    }
-}
-
-
-/* =====================================================
-   📱 MOBILE
-===================================================== */
-
-@media (max-width: 700px) {
-
-    .container {
-        padding: 25px 15px;
-    }
-
-    .proposal-content {
-        flex-direction: column;
-
-        gap: 30px;
-    }
-
-    .kitty {
-        width: 180px;
-        max-width: 60vw;
-    }
-
-    .proposal-box {
-        padding: 28px 20px;
-    }
-
-    .date-screen {
-        padding: 15px;
-    }
-
-    .date-box {
-        padding: 22px 18px;
-    }
-
-    .date-pass {
-        padding: 22px 18px;
-    }
-
-    .pass-top {
-        font-size: 9px;
-    }
-
-    .countdown {
-        gap: 6px;
-    }
-
-    .countdown div {
-        padding: 10px 3px;
-    }
-
-    .countdown span {
-        font-size: 20px;
-    }
-
-    .countdown small {
-        font-size: 7px;
-    }
-
-    .envelope-wrapper {
-        height: 300px;
-    }
-
-    .envelope {
-        width: 320px;
-        height: 205px;
-    }
-
-    .letter-paper {
-        min-height: 185px;
-    }
-
-    .envelope-open .letter-paper {
-        transform:
-            translateY(-105px);
-    }
-
-    .message-page {
-        padding: 30px 15px;
-    }
-
-    #darkModeButton,
-    #musicButton {
-        width: 40px;
-        height: 40px;
-
-        font-size: 17px;
-    }
-
-    #darkModeButton {
-        right: 12px;
-        top: 12px;
-    }
-
-    #musicButton {
-        right: 60px;
-        top: 12px;
-    }
-}
-
-
-/* =====================================================
-   📱 SMALL MOBILE
-===================================================== */
-
-@media (max-width: 420px) {
-
-    .opening-content h1 {
-        font-size: 32px;
-    }
-
-    .proposal-buttons {
-        flex-direction: column;
-    }
-
-    #yesButton,
-    #noButton {
-        width: 100%;
-    }
-
-    .date-pass h1 {
-        font-size: 32px;
-    }
-
-    .pass-detail strong {
-        font-size: 13px;
-    }
-
-    .pass-footer {
-        font-size: 9px;
-    }
-
-    .envelope {
-        width: 290px;
-        height: 185px;
-    }
-
-    .envelope-wrapper {
-        height: 280px;
-    }
-
-    .letter-paper {
-        min-height: 170px;
-
-        padding:
-            18px 12px;
-    }
-
-    .letter-content h2 {
-        font-size: 17px;
-    }
-
-    .letter-content p {
-        font-size: 12px;
-    }
-
-    .envelope-open .letter-paper {
-        transform:
-            translateY(-95px);
-    }
-
-    .message-page-title {
-        font-size: 27px;
-    }
-}
-/* =====================================================
-   📱 MOBILE PREMIUM RESPONSIVE UPDATE
-===================================================== */
-
-
-@media (max-width:700px){
-
-
-    body{
-        overflow-x:hidden;
-    }
-
-
-
-    .container{
-
-        width:100%;
-        min-height:100vh;
-        padding:20px 12px;
-
-    }
-
-
-
-
-    /* ===============================
-       🐱 PROPOSAL SCREEN
-    =============================== */
-
-
-    .proposal-content{
-
-        flex-direction:column;
-        gap:25px;
-        width:100%;
-
-    }
-
-
-
-    .kitty{
-
-        width:160px;
-        max-width:70vw;
-
-    }
-
-
-
-    .proposal-box{
-
-        width:100%;
-        padding:25px 18px;
-        border-radius:22px;
-
-    }
-
-
-
-    .proposal-box h1{
-
-        font-size:32px;
-
-    }
-
-
-
-    .proposal-box h2{
-
-        font-size:20px;
-        line-height:1.4;
-
-    }
-
-
-
-    .proposal-box p{
-
-        font-size:14px;
-
-    }
-
-
-
-
-    .proposal-buttons{
-
-        width:100%;
-        gap:12px;
-
-    }
-
-
-
-    #yesButton,
-    #noButton{
-
-        padding:14px;
-        font-size:15px;
-
-    }
-
-
-
-
-    /* ===============================
-       📅 DATE SCREEN
-    =============================== */
-
-
-    .date-screen{
-
-        width:100%;
-        padding:10px;
-
-    }
-
-
-
-    .date-box{
-
-        width:100%;
-        padding:22px 16px;
-
-    }
-
-
-
-    .date-box h2{
-
-        font-size:22px;
-
-    }
-
-
-
-    .date-box input{
-
-        padding:13px;
-        font-size:15px;
-
-    }
-
-
-
-
-
-    /* ===============================
-       🎟 DATE PASS
-    =============================== */
-
-
-    .confirmed-date{
-
-        width:100%;
-        padding:10px;
-
-    }
-
-
-
-    .date-pass{
-
-        padding:20px 15px;
-
-        border-radius:20px;
-
-    }
-
-
-
-    .pass-top{
-
-        font-size:8px;
-
-    }
-
-
-
-    .date-pass h1{
-
-        font-size:34px;
-
-    }
-
-
-
-    .pass-detail{
-
-        padding:12px 8px;
-
-        gap:10px;
-
-    }
-
-
-
-    .pass-detail strong{
-
-        font-size:13px;
-
-    }
-
-
-
-    .pass-message{
-
-        font-size:14px;
-
-    }
-
-
-
-
-    /* ===============================
-       ⏳ COUNTDOWN
-    =============================== */
-
-
-    .countdown-box{
-
-        padding:18px 10px;
-
-    }
-
-
-
-    .countdown{
-
-        gap:5px;
-
-    }
-
-
-
-    .countdown div{
-
-        padding:10px 2px;
-
-    }
-
-
-
-    .countdown span{
-
-        font-size:20px;
-
-    }
-
-
-
-
-    /* ===============================
-       💌 MESSAGE PAGE
-    =============================== */
-
-
-    .message-page{
-
-        justify-content:flex-start;
-
-        padding-top:35px;
-
-    }
-
-
-
-    .message-page-title{
-
-        font-size:30px;
-
-    }
-
-
-
-    .envelope-wrapper{
-
-        width:95vw;
-
-        height:260px;
-
-        margin-top:25px;
-
-    }
-
-
-
-    .envelope{
-
-        width:290px;
-
-        height:180px;
-
-    }
-
-
-
-    .letter-paper{
-
-        padding:15px 10px;
-
-    }
-
-
-
-    .letter-content p{
-
-        font-size:12px;
-
-    }
-
-
-
-    .open-message-button{
-
-        margin-top:15px;
-
-        width:90%;
-
-    }
-
-
-
-    .back-ticket-button{
-
-        width:90%;
-
-    }
-
-
-
-    /* ===============================
-       🌙 MUSIC BUTTONS
-    =============================== */
-
-
-    #darkModeButton,
-    #musicButton{
-
-        width:38px;
-        height:38px;
-
-        font-size:16px;
-
-        top:12px;
-
-    }
-
-
-    #darkModeButton{
-
-        right:10px;
-
-    }
-
-
-    #musicButton{
-
-        right:55px;
-
-    }
-
-
-
-}
-
-
-
-
-
-/* SMALL PHONES */
-
-@media(max-width:420px){
-
-
-    .opening-heart{
-
-        font-size:60px;
-
-    }
-
-
-
-    .opening-content h1{
-
-        font-size:30px;
-
-    }
-
-
-
-    .kitty{
-
-        width:140px;
-
-    }
-
-
-
-    .proposal-box h1{
-
-        font-size:28px;
-
-    }
-
-
-
-    .date-pass h1{
-
-        font-size:30px;
-
-    }
-
-
-
-    .countdown span{
-
-        font-size:18px;
-
-    }
-
-
-
-}
-/* =====================================
-   ✨ PREMIUM OPENING EFFECT
-===================================== */
-
-.typing-text{
-    overflow:hidden;
-    white-space:nowrap;
-    border-right:3px solid #e91e63;
-    animation:
-    typing 3s steps(30),
-    blink .7s infinite;
-}
-
-
-@keyframes typing{
-
-    from{
-        width:0;
-    }
-
-    to{
-        width:100%;
-    }
-
-}
-
-
-@keyframes blink{
-
-    50%{
-        border-color:transparent;
-    }
-
-}
-
-
-.opening-stars{
-
-    margin-top:20px;
-
-    font-size:22px;
-
-    animation:
-    starFloat 2s infinite alternate;
-
-}
-
-
-@keyframes starFloat{
-
-    from{
-        transform:translateY(0);
-        opacity:.5;
-    }
-
-
-    to{
-        transform:translateY(-10px);
-        opacity:1;
-    }
-
-}
-/* =====================================
-   🐱 PREMIUM KITTY EFFECT
-===================================== */
-
-.kitty{
-    animation:
-    kittyFloat 3s ease-in-out infinite,
-    kittyBreathing 2.5s ease-in-out infinite;
-    cursor:pointer;
-    transition:0.4s ease;
-}
-
-
-.kitty:hover{
-
-    transform:
-    scale(1.08);
-
-    filter:
-    drop-shadow(
-    0 15px 25px rgba(233,30,99,0.35)
-    );
-
-}
-
-
-/* cute breathing */
-
-@keyframes kittyBreathing{
-
-    0%,
-    100%{
-        filter:
-        brightness(1);
-    }
-
-
-    50%{
-        filter:
-        brightness(1.12);
-    }
-
-}
-
-
-/* happy jump */
-
-.kitty-happy{
-
-    animation:
-    kittyJump 0.8s ease,
-    kittyFloat 3s ease-in-out infinite;
-
-}
-
-
-@keyframes kittyJump{
-
-
-    0%{
-        transform:scale(1);
-    }
-
-
-    30%{
-        transform:
-        scale(1.15)
-        translateY(-25px)
-        rotate(-5deg);
-    }
-
-
-    60%{
-        transform:
-        scale(1.05)
-        translateY(5px)
-        rotate(5deg);
-    }
-
-
-    100%{
-        transform:
-        scale(1);
-    }
-
-}
-/* =====================================================
-   ❤️ VERSION 2 ROMANTIC CINEMATIC UPGRADE
-===================================================== */
-
-
-/* ===============================
-   🌸 PREMIUM BACKGROUND GLOW
-=============================== */
-
-body::before{
-
-    content:"";
-
-    position:fixed;
-
-    inset:0;
-
-    pointer-events:none;
-
-    background:
-    radial-gradient(
-        circle at 20% 20%,
-        rgba(233,30,99,0.15),
-        transparent 35%
-    ),
-    radial-gradient(
-        circle at 80% 80%,
-        rgba(255,105,180,0.12),
-        transparent 35%
-    );
-
-    animation:
-    backgroundMove 8s infinite alternate;
-
-}
-
-
-@keyframes backgroundMove{
-
-    from{
-        transform:scale(1);
-    }
-
-    to{
-        transform:scale(1.15);
-    }
-
-}
-
-
-
-/* ===============================
-   💌 PROPOSAL CARD PREMIUM
-=============================== */
-
 
 .proposal-box{
+
+    width:min(430px,100%);
+
+    padding:35px 30px;
+
+
+    background:
+    rgba(255,255,255,.92);
+
+
+    border-radius:25px;
+
+
+    text-align:center;
+
+
+    box-shadow:
+
+    0 20px 50px
+    rgba(233,30,99,.15);
+
+
+    backdrop-filter:
+    blur(10px);
+
 
     position:relative;
 
@@ -2978,36 +657,38 @@ body::before{
 }
 
 
+
 .proposal-box::before{
 
-    content:"";
+content:"";
 
-    position:absolute;
+position:absolute;
 
-    top:-100%;
+top:-100%;
 
-    left:-100%;
+left:-120%;
 
-    width:50%;
+width:50%;
 
-    height:300%;
-
-
-    background:
-    linear-gradient(
-        90deg,
-        transparent,
-        rgba(255,255,255,0.7),
-        transparent
-    );
+height:300%;
 
 
-    transform:
-    rotate(25deg);
+background:
+
+linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.6),
+transparent
+);
 
 
-    animation:
-    cardShine 6s infinite;
+transform:
+rotate(25deg);
+
+
+animation:
+cardShine 6s infinite;
 
 }
 
@@ -3016,419 +697,1220 @@ body::before{
 @keyframes cardShine{
 
 
-    0%{
-        left:-120%;
-    }
+0%{
+
+left:-120%;
+
+}
 
 
-    30%{
-        left:150%;
-    }
+30%{
+
+left:150%;
+
+}
 
 
-    100%{
-        left:150%;
-    }
+100%{
+
+left:150%;
+
+}
+
 
 }
 
 
 
-/* ===============================
-   🐱 KITTY PREMIUM ENTRY
-=============================== */
+.proposal-box h1{
+
+color:#e91e63;
+
+font-family:
+"Playfair Display",
+serif;
+
+font-size:
+clamp(28px,5vw,42px);
+
+margin-bottom:15px;
+
+}
 
 
-.kitty{
+
+.proposal-box h2{
+
+color:#444;
+
+font-size:20px;
+
+margin-bottom:12px;
+
+}
+
+
+
+.proposal-box p{
+
+color:#777;
+
+line-height:1.6;
+
+margin-bottom:25px;
+
+}
+
+
+
+.proposal-buttons{
+
+display:flex;
+
+justify-content:center;
+
+gap:15px;
+
+}
+/* =====================================================
+   📅 DATE SCREEN
+===================================================== */
+
+
+.date-screen{
+
+    width:min(650px,100%);
+
+    text-align:center;
+
+    padding:25px;
 
     animation:
-
-    kittyEntrance 1.5s ease,
-
-    kittyFloat 3s ease-in-out infinite;
+    dateEnter .8s ease both;
 
 }
 
 
 
-@keyframes kittyEntrance{
+@keyframes dateEnter{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(30px)
+scale(.96);
+
+}
 
 
-    from{
+to{
 
-        opacity:0;
+opacity:1;
 
-        transform:
-        translateX(-80px)
-        scale(.7);
+transform:
+translateY(0)
+scale(1);
 
-    }
+}
+
+}
 
 
-    to{
 
-        opacity:1;
+.date-icon{
 
-        transform:
-        translateX(0)
-        scale(1);
+font-size:65px;
 
-    }
+animation:
+heartBeat 1.5s infinite;
+
+}
+
+
+
+.date-screen h1{
+
+color:#e91e63;
+
+font-family:
+"Playfair Display",
+serif;
+
+font-size:
+clamp(32px,6vw,52px);
+
+margin:10px 0;
+
+}
+
+
+
+.date-screen h2{
+
+color:#555;
+
+margin-bottom:10px;
+
+}
+
+
+
+.date-intro{
+
+color:#777;
+
+line-height:1.6;
+
+margin-bottom:25px;
+
+}
+
+
+
+/* =====================================================
+   📅 DATE BOX
+===================================================== */
+
+
+.date-box{
+
+background:
+rgba(255,255,255,.94);
+
+padding:30px;
+
+border-radius:25px;
+
+box-shadow:
+
+0 20px 50px
+rgba(233,30,99,.14);
+
+}
+
+
+
+.date-box h2{
+
+color:#e91e63;
+
+margin-bottom:25px;
+
+}
+
+
+
+.date-box label{
+
+display:block;
+
+text-align:left;
+
+font-size:14px;
+
+font-weight:700;
+
+color:#555;
+
+margin:
+15px 0 7px;
+
+}
+
+
+
+.date-box input{
+
+width:100%;
+
+padding:14px;
+
+border:
+
+2px solid #f2c4d4;
+
+
+border-radius:12px;
+
+outline:none;
+
+font-size:16px;
+
+}
+
+
+
+.date-box input:focus{
+
+border-color:#e91e63;
+
+}
+
+
+
+#dateCuteMessage{
+
+margin-top:15px;
+
+color:#e91e63;
+
+font-weight:600;
 
 }
 
 
 
 
-/* ===============================
-   ❤️ BUTTON PREMIUM
-=============================== */
+.selected-date-preview,
+.selected-time{
 
 
-#yesButton{
+margin-top:15px;
 
-    position:relative;
+padding:15px;
 
-    overflow:hidden;
+background:
+rgba(233,30,99,.06);
 
-}
-
-
-
-#yesButton::after{
-
-    content:"";
-
-    position:absolute;
-
-    inset:0;
-
-    background:
-    linear-gradient(
-        120deg,
-        transparent,
-        rgba(255,255,255,.5),
-        transparent
-    );
-
-
-    transform:
-    translateX(-100%);
-
-
-    animation:
-    buttonGlow 3s infinite;
+border-radius:15px;
 
 }
 
 
 
-@keyframes buttonGlow{
+.selected-date-preview span,
+.selected-time span{
 
+display:block;
 
-    30%{
+font-size:11px;
 
-        transform:
-        translateX(100%);
+font-weight:800;
 
-    }
+color:#e91e63;
 
-
-    100%{
-
-        transform:
-        translateX(100%);
-
-    }
+letter-spacing:1px;
 
 }
 
 
 
+.selected-date-preview strong,
+.selected-time strong{
 
-#noButton{
+display:block;
 
-    transition:
-    .3s ease;
+font-size:17px;
 
-}
-
-
-
-#noButton:hover{
-
-    transform:
-    rotate(5deg);
+color:#333;
 
 }
 
 
 
-/* ===============================
-   💕 FLOATING MINI HEARTS
-=============================== */
+/* =====================================================
+   🎟 DATE PASS
+===================================================== */
 
 
-.proposal-screen::after{
+.confirmed-date{
 
-    content:"❤️  💕  ❤️  💗";
+width:min(600px,100%);
 
-    position:fixed;
+text-align:center;
 
-    bottom:-50px;
-
-    left:50%;
-
-
-    font-size:30px;
-
-    opacity:.3;
-
-
-    animation:
-    floatingLove 8s infinite;
-
-
-    pointer-events:none;
+padding:20px;
 
 }
 
 
 
-@keyframes floatingLove{
+.date-pass{
+
+position:relative;
+
+overflow:hidden;
+
+padding:30px;
+
+border-radius:22px;
 
 
-    from{
+background:
 
-        transform:
-        translateY(0);
+linear-gradient(
+145deg,
+#fff,
+#fff5f8
+);
 
-    }
+
+border:
+2px solid
+rgba(233,30,99,.18);
 
 
-    to{
+box-shadow:
 
-        transform:
-        translateY(-120vh);
+0 25px 60px
+rgba(233,30,99,.18);
 
-    }
+animation:
+
+ticketDrop 1s ease both;
+
+}
+
+
+
+@keyframes ticketDrop{
+
+from{
+
+opacity:0;
+
+transform:
+translateY(-60px)
+scale(.8);
+
+}
+
+
+to{
+
+opacity:1;
+
+transform:
+translateY(0)
+scale(1);
+
+}
 
 }
 
 
 
 
-/* ===============================
-   📱 MOBILE POLISH
-=============================== */
+.date-pass::before{
+
+content:"♥";
+
+position:absolute;
+
+right:-30px;
+
+bottom:-50px;
+
+font-size:220px;
+
+color:
+
+rgba(233,30,99,.04);
+
+}
+
+
+
+.pass-top{
+
+display:flex;
+
+justify-content:space-between;
+
+color:#e91e63;
+
+font-size:11px;
+
+font-weight:800;
+
+margin-bottom:20px;
+
+}
+
+
+
+.pass-heart{
+
+font-size:65px;
+
+animation:
+heartBeat 1.5s infinite;
+
+}
+
+
+
+.date-pass h1{
+
+font-family:
+"Playfair Display",
+serif;
+
+font-size:
+clamp(32px,7vw,50px);
+
+color:#e91e63;
+
+}
+
+
+
+.pass-subtitle{
+
+color:#777;
+
+line-height:1.6;
+
+margin:20px 0;
+
+}
+
+
+
+.pass-line{
+
+border-top:
+
+1px dashed
+rgba(233,30,99,.25);
+
+margin:20px 0;
+
+}
+
+
+
+.pass-details{
+
+display:flex;
+
+flex-direction:column;
+
+gap:12px;
+
+text-align:left;
+
+}
+
+
+
+.pass-detail{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+padding:13px;
+
+border-left:
+
+3px solid #e91e63;
+
+}
+
+
+
+.detail-icon{
+
+font-size:25px;
+
+}
+
+
+
+.pass-detail small{
+
+display:block;
+
+font-size:10px;
+
+color:#999;
+
+}
+
+
+
+.pass-detail strong{
+
+color:#333;
+
+font-size:15px;
+
+}
+
+
+
+.pass-message{
+
+color:#666;
+
+font-style:italic;
+
+line-height:1.6;
+
+margin-top:15px;
+
+}
+
+
+
+.pass-footer{
+
+margin-top:25px;
+
+padding-top:20px;
+
+border-top:
+
+1px dashed
+rgba(233,30,99,.25);
+
+color:#e91e63;
+
+font-size:11px;
+
+display:flex;
+
+justify-content:space-between;
+
+}
+
+
+
+
+
+/* =====================================================
+   ⏳ COUNTDOWN
+===================================================== */
+
+
+.countdown-box{
+
+margin-top:25px;
+
+padding:25px;
+
+background:white;
+
+border-radius:22px;
+
+box-shadow:
+
+0 15px 35px
+rgba(233,30,99,.1);
+
+}
+
+
+
+.countdown-box h2{
+
+color:#e91e63;
+
+margin-bottom:18px;
+
+}
+
+
+
+.countdown{
+
+display:grid;
+
+grid-template-columns:
+repeat(4,1fr);
+
+gap:10px;
+
+}
+
+
+
+.countdown div{
+
+padding:13px 5px;
+
+background:
+
+rgba(233,30,99,.06);
+
+border-radius:12px;
+
+}
+
+
+
+.countdown span{
+
+display:block;
+
+font-size:25px;
+
+font-weight:800;
+
+color:#e91e63;
+
+}
+
+
+
+.countdown small{
+
+font-size:9px;
+
+color:#888;
+
+}
+
+
+
+
+
+/* =====================================================
+   💌 MESSAGE PAGE
+===================================================== */
+
+
+.message-page{
+
+position:fixed;
+
+inset:0;
+
+z-index:60000;
+
+overflow-y:auto;
+
+padding:45px 20px;
+
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+justify-content:center;
+
+
+text-align:center;
+
+
+background:
+
+linear-gradient(
+135deg,
+#fff1f6,
+#ffe1eb
+);
+
+}
+
+
+
+.message-heart{
+
+font-size:55px;
+
+animation:
+heartBeat 1.5s infinite;
+
+}
+
+
+
+.message-page-title{
+
+font-family:
+"Playfair Display",
+serif;
+
+font-size:
+clamp(28px,6vw,48px);
+
+color:#333;
+
+margin-top:15px;
+
+}
+
+
+
+
+/* =====================================================
+   ✉️ ENVELOPE
+===================================================== */
+
+
+.envelope-wrapper{
+
+width:min(430px,90vw);
+
+height:330px;
+
+margin:30px auto;
+
+display:flex;
+
+align-items:flex-end;
+
+justify-content:center;
+
+}
+
+
+
+.envelope{
+
+position:relative;
+
+width:360px;
+
+height:230px;
+
+}
+
+
+
+.envelope-back{
+
+position:absolute;
+
+inset:0;
+
+background:
+
+linear-gradient(
+145deg,
+#e91e63,
+#c2185b
+);
+
+border-radius:8px;
+
+}
+
+
+
+.letter-paper{
+
+position:absolute;
+
+left:5%;
+
+bottom:8px;
+
+width:90%;
+
+min-height:205px;
+
+padding:25px 20px;
+
+background:#fffdf8;
+
+border-radius:5px;
+
+z-index:2;
+
+transition:
+
+1.2s ease;
+
+}
+
+
+
+.letter-content{
+
+opacity:0;
+
+transition:.8s ease;
+
+}
+
+
+
+.letter-content h2{
+
+color:#e91e63;
+
+font-family:
+"Playfair Display",
+serif;
+
+}
+
+
+
+.letter-content p{
+
+color:#555;
+
+line-height:1.6;
+
+}
+
+
+
+.letter-sign{
+
+margin-top:25px;
+
+font-family:
+"Dancing Script",
+cursive;
+
+font-size:28px;
+
+color:#e91e63;
+
+text-align:right;
+
+}
+
+
+
+
+.envelope-flap{
+
+position:absolute;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:58%;
+
+background:#f02b70;
+
+clip-path:
+polygon(
+0 0,
+100% 0,
+50% 100%
+);
+
+z-index:4;
+
+transform-origin:top;
+
+transition:
+
+1s ease;
+
+}
+
+
+
+.envelope-open .envelope-flap{
+
+transform:
+
+rotateX(180deg);
+
+}
+
+
+
+.envelope-open .letter-paper{
+
+transform:
+
+translateY(-120px);
+
+}
+
+
+
+.envelope-open .letter-content{
+
+opacity:1;
+
+}
+
+
+
+
+
+/* =====================================================
+   🌙 DARK MODE
+===================================================== */
+
+
+body.dark-romance{
+
+background:
+
+radial-gradient(
+circle,
+#3b1024,
+#090306
+);
+
+color:white;
+
+}
+
+
+
+body.dark-romance .proposal-box,
+body.dark-romance .date-box,
+body.dark-romance .countdown-box{
+
+background:
+
+rgba(35,10,20,.9);
+
+color:white;
+
+}
+
+
+
+body.dark-romance .message-page{
+
+background:
+
+linear-gradient(
+135deg,
+#17070e,
+#2b0b19
+);
+
+}
+
+
+
+body.dark-romance .message-page-title{
+
+color:white;
+
+}
+
+
+
+
+
+/* =====================================================
+   🌙 BUTTONS
+===================================================== */
+
+
+#darkModeButton,
+#musicButton{
+
+position:fixed;
+
+top:20px;
+
+z-index:70000;
+
+width:45px;
+
+height:45px;
+
+border-radius:50%;
+
+background:white;
+
+font-size:20px;
+
+box-shadow:
+
+0 5px 20px
+rgba(0,0,0,.1);
+
+}
+
+
+
+#darkModeButton{
+
+right:20px;
+
+}
+
+
+
+#musicButton{
+
+right:75px;
+
+}
+
+
+
+
+
+/* =====================================================
+   💓 HEART ANIMATION
+===================================================== */
+
+
+@keyframes heartBeat{
+
+
+0%,100%{
+
+transform:
+scale(1);
+
+}
+
+
+50%{
+
+transform:
+scale(1.12);
+
+}
+
+}
+
+
+
+
+/* =====================================================
+   📱 MOBILE
+===================================================== */
 
 
 @media(max-width:700px){
 
 
-.proposal-content{
+.container{
 
-    gap:40px;
+padding:
+20px 12px;
 
 }
+
+
+
+.proposal-content{
+
+flex-direction:column;
+
+gap:35px;
+
+}
+
 
 
 .kitty{
 
-    width:170px;
+width:170px;
 
 }
+
 
 
 .proposal-box{
 
-    box-shadow:
-
-    0 25px 70px
-    rgba(233,30,99,.25);
-
-}
-
-
-}
-/* =====================================
-   💌 SIGNATURE FONT
-===================================== */
-
-.letter-sign{
-
-    margin-top:25px;
-
-    color:#e91e63;
-
-    font-family:
-    "Playfair Display",
-    cursive;
-
-    font-size:24px;
-
-    font-weight:700;
-
-    font-style:italic;
-
-    letter-spacing:1px;
-
-    transform:rotate(-3deg);
-
-    text-align:right;
-
-    padding-right:20px;
-
-}
-/* KITTY REACTIONS */
-
-
-.kitty-sad{
-
-animation: kittySad 0.5s ease;
+padding:25px 18px;
 
 }
 
 
 
-@keyframes kittySad{
+.date-box{
 
-0%{
-transform: translateX(0);
-}
-
-
-25%{
-transform: translateX(-15px);
-}
-
-
-50%{
-transform: translateX(15px);
-}
-
-
-75%{
-transform: translateX(-10px);
-}
-
-
-100%{
-transform: translateX(0);
-}
+padding:20px 15px;
 
 }
 
 
 
+.countdown span{
 
-.kitty-happy{
-
-animation: kittyHappy 0.8s ease;
-
-}
-
-
-
-@keyframes kittyHappy{
-
-
-0%{
-transform: scale(1);
-}
-
-
-50%{
-transform: scale(1.15) rotate(5deg);
-}
-
-
-100%{
-transform: scale(1);
-}
-
-
-}
-/* NO BUTTON RUNNING FIX */
-
-#noButton{
-
-position:relative;
-z-index:9999;
-}
-
-
-#noButton.catch-mode{
-
-position:fixed !important;
-z-index:99999 !important;
-
-}
-
-
-/* KITTY REACTION */
-
-.kitty-sad{
-
-animation: kittySad 0.5s ease;
-
-}
-
-
-.kitty-happy{
-
-animation: kittyHappy 0.8s ease;
+font-size:18px;
 
 }
 
 
 
-@keyframes kittySad{
+.envelope{
 
-0%{
-transform:translateX(0);
-}
+width:290px;
 
-
-25%{
-transform:translateX(-15px);
-}
-
-
-50%{
-transform:translateX(15px);
-}
-
-
-75%{
-transform:translateX(-10px);
-}
-
-
-100%{
-transform:translateX(0);
-}
+height:180px;
 
 }
 
 
 
-@keyframes kittyHappy{
+.message-page{
 
+justify-content:flex-start;
 
-0%{
-transform:scale(1);
+padding-top:40px;
+
 }
 
 
-50%{
-transform:scale(1.15) rotate(5deg);
+#darkModeButton,
+#musicButton{
+
+width:38px;
+
+height:38px;
+
+top:12px;
+
 }
 
 
-100%{
-transform:scale(1);
+#darkModeButton{
+
+right:10px;
+
 }
+
+
+#musicButton{
+
+right:55px;
+
+}
+
+
+}
+
+
+
+@media(max-width:420px){
+
+
+.proposal-box h1{
+
+font-size:28px;
+
+}
+
+
+
+.kitty{
+
+width:140px;
+
+}
+
+
+
+.envelope{
+
+width:270px;
+
+height:170px;
+
+}
+
 
 
 }
