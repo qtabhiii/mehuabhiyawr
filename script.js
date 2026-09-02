@@ -95,11 +95,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
             else if(noCount>=4){
 
-                noButton.innerHTML="Catch me 😂";
+noButton.innerHTML="Catch me 😂";
 
-                moveNoButton();
+moveNoButton();
 
-            }
+
+setInterval(()=>{
+
+moveNoButton();
+
+},1500);
+
+
+}
 
 
 
@@ -148,28 +156,27 @@ document.addEventListener("DOMContentLoaded", () => {
     if(!noButton) return;
 
 
-    noButton.style.position = "fixed";
+    noButton.classList.add("catch-mode");
 
 
-    const buttonWidth = noButton.offsetWidth;
-    const buttonHeight = noButton.offsetHeight;
+    let buttonWidth = noButton.offsetWidth;
+    let buttonHeight = noButton.offsetHeight;
 
 
-    let x = Math.random() * 
-    (window.innerWidth - buttonWidth - 40);
+    let maxX = window.innerWidth - buttonWidth - 40;
+    let maxY = window.innerHeight - buttonHeight - 40;
 
 
-    let y = Math.random() * 
-    (window.innerHeight - buttonHeight - 40);
+    let x = Math.random()*maxX;
+    let y = Math.random()*maxY;
 
 
+    noButton.style.left =
+    Math.max(20,x)+"px";
 
-    noButton.style.left = Math.max(20,x)+"px";
-    noButton.style.top = Math.max(20,y)+"px";
 
-
-    noButton.style.transition =
-    "all 0.3s ease";
+    noButton.style.top =
+    Math.max(20,y)+"px";
 
 
 }

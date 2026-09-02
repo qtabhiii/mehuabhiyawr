@@ -3280,3 +3280,155 @@ body::before{
     padding-right:20px;
 
 }
+/* KITTY REACTIONS */
+
+
+.kitty-sad{
+
+animation: kittySad 0.5s ease;
+
+}
+
+
+
+@keyframes kittySad{
+
+0%{
+transform: translateX(0);
+}
+
+
+25%{
+transform: translateX(-15px);
+}
+
+
+50%{
+transform: translateX(15px);
+}
+
+
+75%{
+transform: translateX(-10px);
+}
+
+
+100%{
+transform: translateX(0);
+}
+
+}
+
+
+
+
+.kitty-happy{
+
+animation: kittyHappy 0.8s ease;
+
+}
+
+
+
+@keyframes kittyHappy{
+
+
+0%{
+transform: scale(1);
+}
+
+
+50%{
+transform: scale(1.15) rotate(5deg);
+}
+
+
+100%{
+transform: scale(1);
+}
+
+
+}
+/* NO BUTTON RUNNING FIX */
+
+#noButton{
+
+position:relative;
+z-index:9999;
+}
+
+
+#noButton.catch-mode{
+
+position:fixed !important;
+z-index:99999 !important;
+
+}
+
+
+/* KITTY REACTION */
+
+.kitty-sad{
+
+animation: kittySad 0.5s ease;
+
+}
+
+
+.kitty-happy{
+
+animation: kittyHappy 0.8s ease;
+
+}
+
+
+
+@keyframes kittySad{
+
+0%{
+transform:translateX(0);
+}
+
+
+25%{
+transform:translateX(-15px);
+}
+
+
+50%{
+transform:translateX(15px);
+}
+
+
+75%{
+transform:translateX(-10px);
+}
+
+
+100%{
+transform:translateX(0);
+}
+
+}
+
+
+
+@keyframes kittyHappy{
+
+
+0%{
+transform:scale(1);
+}
+
+
+50%{
+transform:scale(1.15) rotate(5deg);
+}
+
+
+100%{
+transform:scale(1);
+}
+
+
+}
