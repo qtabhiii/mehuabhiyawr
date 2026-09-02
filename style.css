@@ -1723,15 +1723,24 @@ button:active {
 }
 
 .letter-sign {
-    margin-top: 18px;
+
+    margin-top: 25px;
 
     color: #e91e63;
 
+    font-family: "Dancing Script", cursive;
+
+    font-size: 28px;
+
     font-weight: 700;
 
-    font-size: 13px;
-}
+    font-style: italic;
 
+    text-align: right;
+
+    padding-right: 20px;
+
+}
 
 /* =====================================================
    💌 ENVELOPE FLAP
@@ -3209,5 +3218,34 @@ body::before{
 
 }
 
+
+}
+/* =====================================
+   💌 SIGNATURE FONT
+===================================== */
+
+.letter-sign{
+
+    margin-top:25px;
+
+    color:#e91e63;
+
+    font-family:
+    "Playfair Display",
+    cursive;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    font-style:italic;
+
+    letter-spacing:1px;
+
+    transform:rotate(-3deg);
+
+    text-align:right;
+
+    padding-right:20px;
 
 }
