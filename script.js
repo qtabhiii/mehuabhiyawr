@@ -650,7 +650,6 @@ dateInput.value;
 window.savedTime =
 timeInput.value;
 
-sendToWhatsApp(dateInput.value, timeInput.value);
 
 showBookingAnimation();
 
@@ -1049,6 +1048,14 @@ class="message-button">
 
 </button>
 
+<button 
+id="whatsappChatButton"
+class="message-button">
+
+💬 CHAT WITH ME
+
+</button>
+
 
 
 </div>
@@ -1064,6 +1071,8 @@ startCountdown(date,time);
 
 
 setupMessageButton();
+
+setupWhatsAppButton();
 
 
 
@@ -1772,7 +1781,7 @@ musicButton.innerHTML="🎵";
 
 function sendToWhatsApp(date, time) {
   // ✅ India number: 91 (country code) + 8505946172
-  const MY_NUMBER = "9198505946172";
+  const MY_NUMBER = "918505946172";
 
   const name = window.userName || localStorage.getItem("userName") || "Someone";
 
@@ -1797,3 +1806,24 @@ function sendToWhatsApp(date, time) {
 }
 
 });
+
+function setupWhatsAppButton(){
+
+const button = document.getElementById("whatsappChatButton");
+
+if(!button) return;
+
+
+button.addEventListener("click",()=>{
+
+const number="918505946172";
+
+window.open(
+"https://wa.me/"+number,
+"_blank"
+);
+
+});
+
+
+}
