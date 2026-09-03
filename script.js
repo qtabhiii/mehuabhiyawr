@@ -1,551 +1,403 @@
-document.addEventListener("DOMContentLoaded", () => {
-
-    const openingScreen = document.getElementById("openingScreen");
-    const enterButton = document.getElementById("enterButton");
-
-    const yesButton = document.getElementById("yesButton");
-    const noButton = document.getElementById("noButton");
-
-    const kitty = document.querySelector(".kitty");
-
-    let noCount = 0;
+document.addEventListener("DOMContentLoaded",()=>{
 
 
-    // ===============================
-    // OPEN HEART SCREEN
-    // ===============================
+// =================================
+// VARIABLES
+// =================================
 
-    if (enterButton && openingScreen) {
 
-        enterButton.addEventListener("click", () => {
+const openingScreen =
+document.getElementById("openingScreen");
 
-            openingScreen.classList.add("opening-hidden");
 
-            setTimeout(() => {
+const enterButton =
+document.getElementById("enterButton");
 
-                openingScreen.style.display = "none";
 
-            },800);
+const yesButton =
+document.getElementById("yesButton");
 
-        });
 
-    }
+const noButton =
+document.getElementById("noButton");
+
+
+const kitty =
+document.querySelector(".kitty");
 
 
 
-    // ===============================
-    // YES BUTTON
-    // ===============================
-
-    if(yesButton){
-
-        yesButton.addEventListener("click",()=>{
+let noCount = 0;
 
 
-            if(kitty){
-
-                kitty.classList.add("kitty-happy");
-
-            }
-
-
-            createHearts();
-
-
-            showDateScreen();
-
-
-        });
-
-    }
+window.savedDate = "";
+window.savedTime = "";
 
 
 
 
-    // ===============================
-    // NO BUTTON
-    // ===============================
-
-    if(noButton){
+// =================================
+// OPENING SCREEN
+// =================================
 
 
-        noButton.addEventListener("click",()=>{
+if(enterButton && openingScreen){
 
 
-            noCount++;
+enterButton.addEventListener("click",()=>{
 
 
-            if(noCount===1){
+openingScreen.classList.add(
+"opening-hidden"
+);
 
-                noButton.innerHTML="Please babe 🥺";
 
-            }
 
-            else if(noCount===2){
+setTimeout(()=>{
 
-                noButton.innerHTML="Think again 😭";
+openingScreen.style.display="none";
 
-            }
+},800);
 
-            else if(noCount===3){
 
-                noButton.innerHTML="Choose YES ❤️";
 
-            }
+});
 
-            else if(noCount>=4){
 
-noButton.innerHTML="Catch me 😂";
+}
+
+
+
+
+
+
+// =================================
+// YES BUTTON
+// =================================
+
+
+if(yesButton){
+
+
+yesButton.addEventListener("click",()=>{
+
+
+
+if(kitty){
+
+
+kitty.classList.remove(
+"kitty-sad"
+);
+
+
+
+kitty.classList.add(
+"kitty-happy"
+);
+
+
+
+setTimeout(()=>{
+
+kitty.classList.remove(
+"kitty-happy"
+);
+
+
+},800);
+
+
+}
+
+
+
+
+createHearts();
+
+
+
+showDateScreen();
+
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+// =================================
+// NO BUTTON
+// =================================
+
+
+if(noButton){
+
+
+
+noButton.addEventListener("click",()=>{
+
+
+noCount++;
+
+
+
+
+if(noCount===1){
+
+
+noButton.innerHTML =
+"Please babe 🥺";
+
+
+}
+
+
+else if(noCount===2){
+
+
+noButton.innerHTML =
+"Think again 😭";
+
+
+}
+
+
+else if(noCount===3){
+
+
+noButton.innerHTML =
+"Choose YES ❤️";
+
+
+}
+
+
+else{
+
+
+noButton.innerHTML =
+"Catch me 😂";
+
 
 moveNoButton();
 
-}
-
-
-
-            if(kitty){
-
-    kitty.classList.remove(
-        "kitty-sad"
-    );
-
-    void kitty.offsetWidth;
-
-    kitty.classList.add(
-        "kitty-sad"
-    );
-
-
-    setTimeout(()=>{
-
-        kitty.classList.remove(
-            "kitty-sad"
-        );
-
-
-    },500);
-
 
 }
 
 
 
-        });
-
-
-
-    }
 
 
 
 
-    // ===============================
-    // MOVE NO BUTTON
-    // ===============================
-
-   function moveNoButton(){
-
-    if(!noButton) return;
+if(kitty){
 
 
-    const padding = 10;
+
+kitty.classList.remove(
+"kitty-sad"
+);
 
 
-    const maxX = window.innerWidth - noButton.offsetWidth - padding;
-    const maxY = window.innerHeight - noButton.offsetHeight - padding;
+
+void kitty.offsetWidth;
 
 
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
+
+kitty.classList.add(
+"kitty-sad"
+);
 
 
-    noButton.style.position = "fixed";
 
-    noButton.style.left = randomX + "px";
 
-    noButton.style.top = randomY + "px";
+setTimeout(()=>{
+
+
+kitty.classList.remove(
+"kitty-sad"
+);
+
+
+},600);
+
+
 
 }
 
-    // =========================================
-// 📅 SHOW DATE SCREEN
-// =========================================
+
+
+});
+
+
+}
+
+
+
+
+
+
+
+
+// =================================
+// MOVE NO BUTTON
+// =================================
+
+
+function moveNoButton(){
+
+
+
+if(!noButton)return;
+
+
+
+const padding = 40;
+
+
+
+let maxX =
+window.innerWidth -
+noButton.offsetWidth -
+padding;
+
+
+
+let maxY =
+window.innerHeight -
+noButton.offsetHeight -
+padding;
+
+
+
+
+let x =
+Math.random()*maxX;
+
+
+
+let y =
+Math.random()*maxY;
+
+
+
+
+
+x=Math.max(
+padding,
+Math.min(x,maxX)
+);
+
+
+
+y=Math.max(
+padding,
+Math.min(y,maxY)
+);
+
+
+
+
+noButton.style.position =
+"fixed";
+
+
+
+noButton.style.left =
+x+"px";
+
+
+
+noButton.style.top =
+y+"px";
+
+
+
+}
+
+
+
+
+
+
+
+
+// =================================
+// FLOATING HEARTS
+// =================================
+
+
+function createHearts(){
+
+
+
+for(let i=0;i<20;i++){
+
+
+
+let heart =
+document.createElement("div");
+
+
+
+heart.className =
+"floating-heart";
+
+
+
+heart.innerHTML =
+"❤️";
+
+
+
+heart.style.left =
+Math.random()*100+"vw";
+
+
+
+heart.style.top =
+"90vh";
+
+
+
+document.body.appendChild(
+heart
+);
+
+
+
+setTimeout(()=>{
+
+
+heart.remove();
+
+
+
+},6000);
+
+
+
+}
+
+
+}
+
+
+
+
+// =================================
+// DATE SCREEN
+// =================================
+
 
 function showDateScreen(){
-
-    const container = document.querySelector(".container");
-
-    if(!container) return;
-
-
-    container.innerHTML = `
-
-    <div class="date-screen">
-
-        <div class="date-icon">
-            💕
-        </div>
-
-        <h1>
-            YAYYYYY! 😍❤️
-        </h1>
-
-
-        <h2>
-            Date officially accepted! 🥰
-        </h2>
-
-
-        <p class="date-intro">
-            Now let's choose our perfect moment ✨
-        </p>
-
-
-
-        <div class="date-box">
-
-
-            <h2>
-                📅 PICK OUR DATE
-            </h2>
-
-
-            <label>
-                Choose Date
-            </label>
-
-
-            <input 
-            type="date"
-            id="dateInput">
-
-
-
-            <label>
-                Choose Time
-            </label>
-
-
-            <input 
-            type="time"
-            id="timeInput">
-
-
-            <p id="dateCuteMessage"></p>
-
-
-
-            <div 
-            id="selectedDatePreview"
-            class="selected-date-preview">
-            </div>
-
-
-
-            <button 
-            id="confirmDate">
-
-                CONFIRM OUR DATE ❤️
-
-            </button>
-
-
-        </div>
-
-
-    </div>
-
-    `;
-
-
-
-    setMinimumDate();
-
-    setupDateScreen();
-
-
-}
-
-
-
-// =========================================
-// 📅 MINIMUM DATE
-// =========================================
-
-function setMinimumDate(){
-
-
-    const dateInput =
-    document.getElementById("dateInput");
-
-
-    if(!dateInput) return;
-
-
-
-    let today = new Date();
-
-
-
-    let date =
-    today.toISOString().split("T")[0];
-
-
-    dateInput.min=date;
-
-
-}
-
-
-
-// =========================================
-// 📅 DATE SCREEN EVENTS
-// =========================================
-
-function setupDateScreen(){
-
-
-const dateInput =
-document.getElementById("dateInput");
-
-
-const timeInput =
-document.getElementById("timeInput");
-
-
-const confirmDate =
-document.getElementById("confirmDate");
-
-
-
-if(!dateInput || !timeInput || !confirmDate)
-return;
-
-
-
-
-dateInput.addEventListener("change",()=>{
-
-
-const msg =
-document.getElementById("dateCuteMessage");
-
-
-const preview =
-document.getElementById("selectedDatePreview");
-
-
-
-let date =
-new Date(dateInput.value);
-
-
-
-let formatted =
-date.toLocaleDateString(
-"en-US",
-{
-weekday:"long",
-day:"numeric",
-month:"long",
-year:"numeric"
-}
-);
-
-
-
-msg.innerHTML =
-"Finally... our special day is coming ❤️";
-
-
-
-preview.innerHTML = `
-
-<span>
-💕 OUR DATE
-</span>
-
-<strong>
-${formatted}
-</strong>
-
-`;
-
-
-
-});
-
-
-
-
-
-timeInput.addEventListener("change",()=>{
-
-
-const preview =
-document.getElementById("selectedDatePreview");
-
-
-
-preview.innerHTML += `
-
-<div class="selected-time">
-
-<span>
-⏰ TIME
-</span>
-
-
-<strong>
-${timeInput.value}
-</strong>
-
-
-</div>
-
-
-`;
-
-
-
-});
-
-
-
-
-
-confirmDate.addEventListener("click",()=>{
-
-
-if(!dateInput.value || !timeInput.value){
-
-alert(
-"Please select date and time ❤️"
-);
-
-return;
-
-}
-
-
-
-window.savedDate =
-dateInput.value;
-
-
-window.savedTime =
-timeInput.value;
-
-
-
-showBookingAnimation();
-
-
-
-});
-
-
-
-}
-
-// =========================================
-// 🎬 BOOKING ANIMATION
-// =========================================
-
-function showBookingAnimation(){
-
-
-const overlay = document.createElement("div");
-
-
-overlay.className="booking-overlay";
-
-
-overlay.innerHTML = `
-
-<div class="booking-content">
-
-
-<div class="booking-heart">
-💗
-</div>
-
-
-<h1>
-OUR DATE IS<br>
-OFFICIALLY BOOKED ❤️
-</h1>
-
-
-<p>
-I can't wait to make this memory with you ✨
-</p>
-
-
-<div class="booking-hearts">
-💕 💖 💗 💘 💕
-</div>
-
-
-</div>
-
-`;
-
-
-
-document.body.appendChild(overlay);
-
-
-
-setTimeout(()=>{
-
-overlay.classList.add("show-booking");
-
-
-},50);
-
-
-
-
-setTimeout(()=>{
-
-
-overlay.classList.remove("show-booking");
-
-
-
-setTimeout(()=>{
-
-
-overlay.remove();
-
-
-showFinalScreen(
-window.savedDate,
-window.savedTime
-);
-
-
-
-},500);
-
-
-
-},2500);
-
-
-
-}
-
-
-
-
-
-// =========================================
-// 🎟️ FINAL DATE PASS
-// =========================================
-
-function showFinalScreen(date,time){
 
 
 
@@ -559,8 +411,615 @@ if(!container)return;
 
 
 
+container.innerHTML = `
+
+
+
+<div class="date-screen">
+
+
+
+<div class="date-icon">
+
+💕
+
+
+</div>
+
+
+
+
+<h1>
+
+YAYYYYY! 😍❤️
+
+</h1>
+
+
+
+<h2>
+
+Date officially accepted! 🥰
+
+</h2>
+
+
+
+
+<p class="date-intro">
+
+Now let's choose our perfect moment ✨
+
+</p>
+
+
+
+
+
+<div class="date-box">
+
+
+
+<h2>
+
+📅 PICK OUR DATE
+
+</h2>
+
+
+
+
+<label>
+
+Choose Date
+
+</label>
+
+
+
+<input 
+type="date"
+id="dateInput">
+
+
+
+
+
+<label>
+
+Choose Time
+
+</label>
+
+
+
+<input 
+type="time"
+id="timeInput">
+
+
+
+
+
+<p id="dateCuteMessage"></p>
+
+
+
+
+
+<div 
+id="selectedDatePreview"
+class="selected-date-preview">
+
+
+</div>
+
+
+
+
+
+<button 
+id="confirmDate">
+
+
+CONFIRM OUR DATE ❤️
+
+
+</button>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+`;
+
+
+
+
+setMinimumDate();
+
+
+setupDateScreen();
+
+
+
+}
+
+
+
+
+
+
+
+
+// =================================
+// MINIMUM DATE
+// =================================
+
+
+function setMinimumDate(){
+
+
+
+const dateInput =
+document.getElementById(
+"dateInput"
+);
+
+
+
+if(!dateInput)return;
+
+
+
+
+let today =
+new Date();
+
+
+
+let date =
+today.toISOString()
+.split("T")[0];
+
+
+
+dateInput.min =
+date;
+
+
+
+}
+
+
+
+
+
+
+
+
+// =================================
+// DATE EVENTS
+// =================================
+
+
+function setupDateScreen(){
+
+
+
+const dateInput =
+document.getElementById(
+"dateInput"
+);
+
+
+
+const timeInput =
+document.getElementById(
+"timeInput"
+);
+
+
+
+const confirmDate =
+document.getElementById(
+"confirmDate"
+);
+
+
+
+
+
+if(
+!dateInput ||
+!timeInput ||
+!confirmDate
+)return;
+
+
+
+
+
+
+
+dateInput.addEventListener(
+"change",
+()=>{
+
+
+
+const msg =
+document.getElementById(
+"dateCuteMessage"
+);
+
+
+
+const preview =
+document.getElementById(
+"selectedDatePreview"
+);
+
+
+
+
+
+let date =
+new Date(
+dateInput.value
+);
+
+
+
+
+
+let formatted =
+date.toLocaleDateString(
+"en-US",
+{
+
+weekday:"long",
+
+day:"numeric",
+
+month:"long",
+
+year:"numeric"
+
+}
+
+);
+
+
+
+
+
+msg.innerHTML =
+
+"Finally... our special day is coming ❤️";
+
+
+
+
+
+preview.innerHTML = `
+
+
+<span>
+
+💕 OUR DATE
+
+</span>
+
+
+<strong>
+
+${formatted}
+
+</strong>
+
+
+`;
+
+
+
+});
+
+
+
+
+
+
+
+
+
+timeInput.addEventListener(
+"change",
+()=>{
+
+
+
+const preview =
+document.getElementById(
+"selectedDatePreview"
+);
+
+
+
+
+preview.innerHTML += `
+
+
+
+<div class="selected-time">
+
+
+<span>
+
+⏰ TIME
+
+</span>
+
+
+
+<strong>
+
+${timeInput.value}
+
+</strong>
+
+
+
+</div>
+
+
+`;
+
+
+
+});
+
+
+
+
+
+
+
+
+confirmDate.addEventListener(
+"click",
+()=>{
+
+
+
+if(
+!dateInput.value ||
+!timeInput.value
+){
+
+
+alert(
+"Please select date and time ❤️"
+);
+
+
+return;
+
+
+}
+
+
+
+
+
+
+window.savedDate =
+dateInput.value;
+
+
+
+window.savedTime =
+timeInput.value;
+
+
+
+
+showBookingAnimation();
+
+
+
+
+});
+
+
+
+}
+
+
+
+
+
+
+
+
+// =================================
+// BOOKING ANIMATION
+// =================================
+
+
+function showBookingAnimation(){
+
+
+
+const overlay =
+document.createElement(
+"div"
+);
+
+
+
+overlay.className =
+"booking-overlay";
+
+
+
+
+
+overlay.innerHTML = `
+
+
+
+<div class="booking-content">
+
+
+
+<div class="booking-heart">
+
+💗
+
+</div>
+
+
+
+<h1>
+
+OUR DATE IS
+
+<br>
+
+OFFICIALLY BOOKED ❤️
+
+</h1>
+
+
+
+<p>
+
+I can't wait to make this memory with you ✨
+
+</p>
+
+
+
+<div class="booking-hearts">
+
+💕 💖 💗 💘 💕
+
+</div>
+
+
+
+</div>
+
+
+
+`;
+
+
+
+
+
+document.body.appendChild(
+overlay
+);
+
+
+
+
+
+setTimeout(()=>{
+
+
+overlay.classList.add(
+"show-booking"
+);
+
+
+
+},50);
+
+
+
+
+
+
+
+
+setTimeout(()=>{
+
+
+overlay.classList.remove(
+"show-booking"
+);
+
+
+
+
+setTimeout(()=>{
+
+
+overlay.remove();
+
+
+
+showFinalScreen(
+window.savedDate,
+window.savedTime
+);
+
+
+
+},500);
+
+
+
+
+},2500);
+
+
+
+
+}
+
+
+
+
+
+
+
+
+// =================================
+// FINAL DATE PASS
+// =================================
+
+
+function showFinalScreen(date,time){
+
+
+
+const container =
+document.querySelector(
+".container"
+);
+
+
+
+if(!container)return;
+
+
+
+
+
 let dateObj =
 new Date(date);
+
 
 
 
@@ -568,11 +1027,17 @@ let finalDate =
 dateObj.toLocaleDateString(
 "en-US",
 {
+
 weekday:"long",
+
 day:"numeric",
+
 month:"long",
+
 year:"numeric"
+
 }
+
 );
 
 
@@ -582,6 +1047,7 @@ year:"numeric"
 container.innerHTML = `
 
 
+
 <div class="confirmed-date">
 
 
@@ -589,32 +1055,43 @@ container.innerHTML = `
 <div class="date-pass">
 
 
+
 <div class="pass-top">
 
 <span>
+
 💕 OUR SPECIAL DATE
+
 </span>
 
 
 <span>
+
 NO.001 ❤️
+
 </span>
 
-
 </div>
+
 
 
 
 
 <div class="pass-heart">
+
 💗
+
 </div>
 
 
 
+
 <h1>
+
 IT'S A DATE! 🎉
+
 </h1>
+
 
 
 
@@ -628,7 +1105,10 @@ Officially reserved for two special people 🥰
 
 
 
+
 <div class="pass-line"></div>
+
+
 
 
 
@@ -638,21 +1118,27 @@ Officially reserved for two special people 🥰
 
 <div class="pass-detail">
 
-
 <span class="detail-icon">
+
 📅
+
 </span>
+
 
 
 <div>
 
 <small>
+
 DATE
+
 </small>
 
 
 <strong>
+
 ${finalDate}
+
 </strong>
 
 
@@ -669,19 +1155,26 @@ ${finalDate}
 
 
 <span class="detail-icon">
+
 ⏰
+
 </span>
 
 
 <div>
 
+
 <small>
+
 TIME
+
 </small>
 
 
 <strong>
+
 ${time}
+
 </strong>
 
 
@@ -693,24 +1186,30 @@ ${time}
 
 
 
-
 <div class="pass-detail">
 
 
 <span class="detail-icon">
+
 📍
+
 </span>
 
 
 <div>
 
+
 <small>
+
 LOCATION
+
 </small>
 
 
 <strong>
+
 SECRET 🤫
+
 </strong>
 
 
@@ -731,99 +1230,17 @@ SECRET 🤫
 
 
 
+
 <p class="pass-message">
 
-Dress cute.
-Bring your smile.
-I'll handle the rest ❤️
+Dress cute. Bring your smile. I'll handle the rest ❤️
 
 </p>
 
 
 
 
-
 </div>
-
-
-
-
-
-<div class="countdown-box">
-
-
-<h2>
-⏳ COUNTDOWN TO OUR DATE
-</h2>
-
-
-
-<div class="countdown">
-
-
-<div>
-
-<span id="days">
-00
-</span>
-
-<small>
-DAYS
-</small>
-
-</div>
-
-
-
-<div>
-
-<span id="hours">
-00
-</span>
-
-<small>
-HOURS
-</small>
-
-</div>
-
-
-
-<div>
-
-<span id="minutes">
-00
-</span>
-
-<small>
-MINUTES
-</small>
-
-</div>
-
-
-
-
-<div>
-
-<span id="seconds">
-00
-</span>
-
-<small>
-SECONDS
-</small>
-
-</div>
-
-
-
-</div>
-
-
-</div>
-
-
 
 
 
@@ -831,7 +1248,9 @@ SECONDS
 id="messageButton"
 class="message-button">
 
+
 💌 A MESSAGE FOR YOU
+
 
 </button>
 
@@ -840,12 +1259,15 @@ class="message-button">
 </div>
 
 
-
 `;
 
 
 
-startCountdown(date,time);
+
+startCountdown(
+date,
+time
+);
 
 
 
@@ -854,22 +1276,27 @@ setupMessageButton();
 
 
 }
+// =================================
+// COUNTDOWN
+// =================================
 
-// =========================================
-// ⏳ COUNTDOWN
-// =========================================
 
 let countdownInterval;
+
 
 
 function startCountdown(date,time){
 
 
+
 if(countdownInterval){
 
-clearInterval(countdownInterval);
+clearInterval(
+countdownInterval
+);
 
 }
+
 
 
 
@@ -881,11 +1308,14 @@ date+"T"+time
 
 
 
+
 function update(){
+
 
 
 let now =
 new Date().getTime();
+
 
 
 let diff =
@@ -893,13 +1323,24 @@ target-now;
 
 
 
+
 if(diff<=0){
 
-setValues(0,0,0,0);
+
+setValues(
+0,
+0,
+0,
+0
+);
+
 
 return;
 
+
 }
+
+
 
 
 
@@ -910,10 +1351,12 @@ diff/(1000*60*60*24)
 
 
 
+
 let hours =
 Math.floor(
 (diff/(1000*60*60))%24
 );
+
 
 
 
@@ -924,10 +1367,13 @@ Math.floor(
 
 
 
+
 let seconds =
 Math.floor(
 (diff/1000)%60
 );
+
+
 
 
 
@@ -949,37 +1395,57 @@ seconds
 function setValues(d,h,m,s){
 
 
-let days =
-document.getElementById("days");
+
+const days =
+document.getElementById(
+"days"
+);
 
 
-let hours =
-document.getElementById("hours");
+
+const hours =
+document.getElementById(
+"hours"
+);
 
 
-let minutes =
-document.getElementById("minutes");
+
+const minutes =
+document.getElementById(
+"minutes"
+);
 
 
-let seconds =
-document.getElementById("seconds");
+
+const seconds =
+document.getElementById(
+"seconds"
+);
+
 
 
 
 if(days)
-days.innerHTML=String(d).padStart(2,"0");
+days.innerHTML =
+String(d).padStart(2,"0");
+
 
 
 if(hours)
-hours.innerHTML=String(h).padStart(2,"0");
+hours.innerHTML =
+String(h).padStart(2,"0");
+
 
 
 if(minutes)
-minutes.innerHTML=String(m).padStart(2,"0");
+minutes.innerHTML =
+String(m).padStart(2,"0");
+
 
 
 if(seconds)
-seconds.innerHTML=String(s).padStart(2,"0");
+seconds.innerHTML =
+String(s).padStart(2,"0");
 
 
 
@@ -987,7 +1453,10 @@ seconds.innerHTML=String(s).padStart(2,"0");
 
 
 
+
+
 update();
+
 
 
 countdownInterval =
@@ -1004,12 +1473,17 @@ update,
 
 
 
-// =========================================
-// 💌 MESSAGE BUTTON
-// =========================================
+
+
+
+
+// =================================
+// MESSAGE BUTTON
+// =================================
 
 
 function setupMessageButton(){
+
 
 
 const button =
@@ -1023,11 +1497,14 @@ if(!button)return;
 
 
 
+
 button.addEventListener(
 "click",
 ()=>{
 
+
 openMessagePage();
+
 
 }
 
@@ -1040,41 +1517,69 @@ openMessagePage();
 
 
 
-// =========================================
-// 💌 MESSAGE PAGE
-// =========================================
+
+
+
+
+
+// =================================
+// MESSAGE PAGE
+// =================================
 
 
 function openMessagePage(){
 
 
+
 const container =
-document.querySelector(".container");
+document.querySelector(
+".container"
+);
 
 
 
-container.innerHTML=`
+if(!container)return;
+
+
+
+
+
+container.innerHTML = `
+
 
 
 <div class="message-page">
 
 
 
+
+
 <div class="message-page-hearts">
+
 💕
+
 </div>
 
 
 
+
+
 <p class="message-small-title">
+
 JUST FOR YOU ❤️
+
 </p>
+
+
 
 
 
 <h1 class="message-page-title">
 
-I HAVE SOMETHING<br>
+I HAVE SOMETHING
+
+<br>
+
 TO TELL YOU...
 
 </h1>
@@ -1083,48 +1588,75 @@ TO TELL YOU...
 
 
 
+
+
 <div class="envelope-wrapper">
 
 
+
 <div class="envelope">
+
 
 
 <div class="envelope-back"></div>
 
 
 
+
+
 <div class="letter-paper">
+
 
 
 <div class="letter-content">
 
 
+
 <div class="letter-heart">
+
 💗
+
 </div>
 
 
 
+
+
 <h2>
+
 My Little Message ❤️
+
 </h2>
 
 
 
+
+
 <p>
+
 I don't need a perfect world.
+
 </p>
 
 
+
+
 <p>
+
 I just need beautiful moments with you.
+
 </p>
+
 
 
 
 <p>
+
 Let's create memories together ✨
+
 </p>
+
+
 
 
 
@@ -1136,10 +1668,15 @@ Let's create memories together ✨
 </div>
 
 
-</div>
 
 
 </div>
+
+
+
+</div>
+
+
 
 
 
@@ -1147,7 +1684,9 @@ Let's create memories together ✨
 <div class="envelope-flap">
 
 <span>
+
 💌
+
 </span>
 
 
@@ -1155,10 +1694,15 @@ Let's create memories together ✨
 
 
 
-</div>
 
 
 </div>
+
+
+
+</div>
+
+
 
 
 
@@ -1166,23 +1710,37 @@ Let's create memories together ✨
 
 
 <button
+
 id="openMessageButton"
+
 class="open-message-button">
+
 
 OPEN MY MESSAGE ❤️
 
+
 </button>
+
+
+
 
 
 
 
 <button
+
 id="backToTicketButton"
+
 class="back-ticket-button">
+
 
 🎟️ BACK TO OUR DATE
 
+
 </button>
+
+
+
 
 
 
@@ -1193,9 +1751,12 @@ class="back-ticket-button">
 
 
 
+
+
 setupOpenMessage();
 
 setupBackToTicket();
+
 
 
 }
@@ -1204,29 +1765,41 @@ setupBackToTicket();
 
 
 
-// =========================================
-// ✉️ OPEN ENVELOPE
-// =========================================
+
+
+
+
+
+
+// =================================
+// OPEN ENVELOPE
+// =================================
 
 
 function setupOpenMessage(){
 
 
-let button =
+
+const button =
 document.getElementById(
 "openMessageButton"
 );
 
 
 
-let envelope =
+const envelope =
 document.querySelector(
 ".envelope"
 );
 
 
 
-if(!button || !envelope)return;
+
+if(!button || !envelope)
+return;
+
+
+
 
 
 
@@ -1235,17 +1808,20 @@ button.addEventListener(
 ()=>{
 
 
+
 envelope.classList.add(
 "envelope-open"
 );
 
 
 
-button.innerHTML=
+button.innerHTML =
 "💗 MY HEART IS OPEN";
 
 
-button.disabled=true;
+
+button.disabled =
+true;
 
 
 
@@ -1261,15 +1837,21 @@ button.disabled=true;
 
 
 
-// =========================================
-// 🎟️ BACK BUTTON
-// =========================================
+
+
+
+
+
+// =================================
+// BACK TO TICKET
+// =================================
 
 
 function setupBackToTicket(){
 
 
-let button =
+
+const button =
 document.getElementById(
 "backToTicketButton"
 );
@@ -1280,12 +1862,13 @@ if(!button)return;
 
 
 
+
+
+
 button.addEventListener(
 "click",
 ()=>{
 
-
-if(window.savedDate && window.savedTime){
 
 
 showFinalScreen(
@@ -1294,8 +1877,6 @@ window.savedTime
 );
 
 
-}
-
 
 }
 
@@ -1309,70 +1890,13 @@ window.savedTime
 
 
 
-// =========================================
-// ❤️ FLOATING HEARTS
-// =========================================
-
-
-function createHearts(){
-
-
-for(
-let i=0;
-i<20;
-i++
-){
-
-
-let heart =
-document.createElement("div");
-
-
-
-heart.className=
-"floating-heart";
-
-
-
-heart.innerHTML="❤️";
-
-
-
-heart.style.left =
-Math.random()*100+"vw";
-
-
-
-document.body.appendChild(
-heart
-);
-
-
-
-setTimeout(
-()=>{
-
-heart.remove();
-
-},
-6000
-);
-
-
-
-}
-
-
-
-}
 
 
 
 
-
-// =========================================
-// 🌙 DARK MODE
-// =========================================
+// =================================
+// DARK MODE
+// =================================
 
 
 const darkModeButton =
@@ -1385,9 +1909,11 @@ document.getElementById(
 if(darkModeButton){
 
 
+
 darkModeButton.addEventListener(
 "click",
 ()=>{
+
 
 
 document.body.classList.toggle(
@@ -1396,20 +1922,51 @@ document.body.classList.toggle(
 
 
 
+
+if(
+document.body.classList.contains(
+"dark-romance"
+)
+
+){
+
+
+darkModeButton.innerHTML =
+"☀️";
+
+
+}
+
+else{
+
+
+darkModeButton.innerHTML =
+"🌙";
+
+
+}
+
+
+
 }
 
 );
 
 
+
 }
 
 
 
 
 
-// =========================================
-// 🎵 MUSIC
-// =========================================
+
+
+
+
+// =================================
+// MUSIC BUTTON
+// =================================
 
 
 const musicButton =
@@ -1426,10 +1983,13 @@ document.getElementById(
 
 
 
+
+
 if(
 musicButton &&
 backgroundMusic
 ){
+
 
 
 musicButton.addEventListener(
@@ -1437,13 +1997,20 @@ musicButton.addEventListener(
 ()=>{
 
 
-if(backgroundMusic.paused){
+
+if(
+backgroundMusic.paused
+){
+
 
 
 backgroundMusic.play();
 
 
-musicButton.innerHTML="🔊";
+
+musicButton.innerHTML =
+"🔊";
+
 
 
 }
@@ -1451,10 +2018,13 @@ musicButton.innerHTML="🔊";
 else{
 
 
+
 backgroundMusic.pause();
 
 
-musicButton.innerHTML="🎵";
+
+musicButton.innerHTML =
+"🎵";
 
 
 }
@@ -1471,5 +2041,37 @@ musicButton.innerHTML="🎵";
 
 
 
-// CLOSE DOM CONTENT
+
+
+
+
+
+
+// =================================
+// RESET NO BUTTON ON RESIZE
+// =================================
+
+
+window.addEventListener(
+"resize",
+()=>{
+
+
+
+if(noButton){
+
+
+noButton.style.left="";
+
+noButton.style.top="";
+
+
+}
+
+
+
+});
+
+
+
 });

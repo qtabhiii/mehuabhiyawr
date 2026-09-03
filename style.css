@@ -36,25 +36,29 @@ body{
     transition:
     background .5s ease,
     color .5s ease;
-
 }
+
 
 
 button,
 input{
+
     font-family:inherit;
+
 }
+
 
 
 button{
 
     border:none;
+
     cursor:pointer;
 
-    transition:
-    .3s ease;
+    transition:.3s ease;
 
 }
+
 
 
 button:active{
@@ -63,11 +67,16 @@ button:active{
 
 }
 
+
+
 #noButton:active{
 
     transform:none !important;
 
 }
+
+
+
 
 
 
@@ -92,6 +101,7 @@ button:active{
 }
 
 
+
 .background-hearts span{
 
     position:absolute;
@@ -107,71 +117,121 @@ button:active{
 }
 
 
+
 .background-hearts span:nth-child(1){
+
     left:8%;
+
     top:15%;
+
 }
+
+
 
 .background-hearts span:nth-child(2){
+
     left:22%;
+
     top:70%;
+
     animation-delay:1s;
+
 }
+
+
 
 .background-hearts span:nth-child(3){
+
     left:40%;
+
     top:20%;
+
     animation-delay:2s;
+
 }
+
+
 
 .background-hearts span:nth-child(4){
+
     left:60%;
+
     top:75%;
+
     animation-delay:3s;
+
 }
+
+
 
 .background-hearts span:nth-child(5){
+
     left:75%;
+
     top:15%;
+
     animation-delay:4s;
+
 }
+
+
 
 .background-hearts span:nth-child(6){
+
     left:88%;
+
     top:55%;
+
 }
+
+
 
 .background-hearts span:nth-child(7){
+
     left:50%;
+
     top:45%;
+
 }
 
+
+
 .background-hearts span:nth-child(8){
+
     left:5%;
+
     top:50%;
+
 }
+
 
 
 @keyframes heartFloat{
 
-    0%,100%{
 
-        transform:
-        translateY(0)
-        rotate(0);
+0%,100%{
 
-    }
-
-
-    50%{
-
-        transform:
-        translateY(-25px)
-        rotate(10deg);
-
-    }
+    transform:
+    translateY(0)
+    rotate(0);
 
 }
+
+
+
+50%{
+
+    transform:
+    translateY(-25px)
+    rotate(10deg);
+
+}
+
+
+}
+
+
+
 
 
 
@@ -203,6 +263,10 @@ button:active{
     justify-content:center;
 
 }
+
+
+
+
 
 
 
@@ -251,6 +315,7 @@ button:active{
 
 
 
+
 .opening-screen.opening-hidden{
 
     opacity:0;
@@ -264,6 +329,9 @@ button:active{
 
 
 
+
+
+
 .opening-content{
 
     width:min(500px,100%);
@@ -271,9 +339,13 @@ button:active{
     text-align:center;
 
     animation:
+
     openingIn 1s ease both;
 
 }
+
+
+
 
 
 
@@ -286,10 +358,12 @@ from{
     opacity:0;
 
     transform:
+
     translateY(30px)
     scale(.95);
 
 }
+
 
 
 to{
@@ -297,6 +371,7 @@ to{
     opacity:1;
 
     transform:
+
     translateY(0)
     scale(1);
 
@@ -307,6 +382,10 @@ to{
 
 
 
+
+
+
+
 .opening-heart{
 
     font-size:75px;
@@ -314,9 +393,14 @@ to{
     margin-bottom:20px;
 
     animation:
+
     heartBeat 1.5s infinite;
 
 }
+
+
+
+
 
 
 
@@ -325,15 +409,19 @@ to{
     color:#e91e63;
 
     font-family:
+
     "Playfair Display",
     serif;
 
     font-size:
+
     clamp(32px,6vw,55px);
 
     margin-bottom:15px;
 
 }
+
+
 
 
 
@@ -353,6 +441,10 @@ to{
 
 
 
+
+
+
+
 /* =====================================================
    ❤️ BUTTONS
 ===================================================== */
@@ -363,9 +455,11 @@ to{
 #noButton{
 
     padding:
+
     14px 28px;
 
     border-radius:
+
     50px;
 
     font-size:16px;
@@ -376,26 +470,35 @@ to{
 
 
 
+
+
 #enterButton,
 #yesButton{
+
 
     background:#e91e63;
 
     color:white;
 
+
     box-shadow:
 
     0 10px 25px
+
     rgba(233,30,99,.25);
 
 }
 
 
 
+
+
 #enterButton:hover,
 #yesButton:hover{
 
+
     transform:
+
     translateY(-3px)
     scale(1.05);
 
@@ -404,36 +507,48 @@ to{
 
 
 
+
+
+
 #noButton {
-    background: #f3f3f3;
-    color: #555;
+
+    background:#f3f3f3;
+
+    color:#555;
+
 }
 
+
+
 #noButton:hover {
-    background: #e9e9e9;
+
+    background:#e9e9e9;
+
 }
+
+
+
 #noButton{
 
     position:relative;
 
     transition:
+
     left .35s ease,
+
     top .35s ease;
 
     transform:none !important;
 
 }
 
+
+
 #noButton:hover {
 
-    transform: none !important;
+    transform:none !important;
 
 }
-
-
-
-
-
 /* =====================================================
    🐱 PROPOSAL SCREEN
 ===================================================== */
@@ -444,6 +559,7 @@ to{
     width:100%;
 
 }
+
 
 
 
@@ -464,7 +580,12 @@ to{
 
 
 
-/* KITTY */
+
+
+
+/* =====================================================
+   🐱 KITTY
+===================================================== */
 
 
 .kitty-wrapper{
@@ -476,6 +597,8 @@ to{
     justify-content:center;
 
 }
+
+
 
 
 
@@ -501,32 +624,44 @@ to{
 
 
 
+
+
+
 @keyframes kittyEntrance{
 
 
 from{
 
-opacity:0;
+    opacity:0;
 
-transform:
-translateX(-80px)
-scale(.7);
+    transform:
+
+    translateX(-80px)
+
+    scale(.7);
 
 }
+
 
 
 to{
 
-opacity:1;
+    opacity:1;
 
-transform:
-translateX(0)
-scale(1);
+    transform:
+
+    translateX(0)
+
+    scale(1);
 
 }
 
 
 }
+
+
+
+
 
 
 
@@ -535,68 +670,100 @@ scale(1);
 
 0%,100%{
 
-transform:
-translateY(0);
+    transform:
+
+    translateY(0);
 
 }
+
 
 
 50%{
 
-transform:
-translateY(-12px);
+    transform:
+
+    translateY(-12px);
 
 }
 
 
 }
+
+
+
 
 
 
 
 .kitty-happy{
 
+
     animation:
+
     kittyHappy .8s ease;
 
 }
+
+
+
+
+
 
 
 @keyframes kittyHappy{
 
 
 0%{
-transform:scale(1);
+
+    transform:
+
+    scale(1);
+
 }
+
 
 
 50%{
 
-transform:
-scale(1.15)
-rotate(5deg);
+    transform:
+
+    scale(1.15)
+
+    rotate(5deg);
 
 }
+
 
 
 100%{
 
-transform:
-scale(1);
+    transform:
+
+    scale(1);
 
 }
 
+
 }
+
+
+
 
 
 
 
 .kitty-sad{
 
-animation:
-kittySad .5s ease;
+
+    animation:
+
+    kittySad .5s ease;
 
 }
+
+
+
+
 
 
 
@@ -606,37 +773,49 @@ kittySad .5s ease;
 0%,
 100%{
 
-transform:
-translateX(0);
+    transform:
+
+    translateX(0);
 
 }
+
 
 
 25%{
 
-transform:
-translateX(-15px);
+    transform:
+
+    translateX(-15px);
 
 }
+
 
 
 50%{
 
-transform:
-translateX(15px);
+    transform:
+
+    translateX(15px);
 
 }
+
 
 
 75%{
 
-transform:
-translateX(-10px);
+    transform:
+
+    translateX(-10px);
 
 }
 
 
 }
+
+
+
+
+
 
 
 
@@ -648,13 +827,16 @@ translateX(-10px);
 
 .proposal-box{
 
+
     width:min(430px,100%);
 
     padding:35px 30px;
 
 
     background:
+
     rgba(255,255,255,.92);
+
 
 
     border-radius:25px;
@@ -663,57 +845,93 @@ translateX(-10px);
     text-align:center;
 
 
+
     box-shadow:
 
+
     0 20px 50px
+
     rgba(233,30,99,.15);
 
 
+
     backdrop-filter:
+
     blur(10px);
+
 
 
     position:relative;
 
     overflow:hidden;
 
+
 }
+
+
+
+
 
 
 
 .proposal-box::before{
 
+
 content:"";
+
 
 position:absolute;
 
+
 top:-100%;
+
 
 left:-120%;
 
+
 width:50%;
+
 
 height:300%;
 
 
+
 background:
 
+
 linear-gradient(
+
 90deg,
+
 transparent,
+
 rgba(255,255,255,.6),
+
 transparent
+
 );
 
 
+
+
 transform:
+
 rotate(25deg);
 
 
+
+
 animation:
+
 cardShine 6s infinite;
 
+
+
 }
+
+
+
+
 
 
 
@@ -722,79 +940,127 @@ cardShine 6s infinite;
 
 0%{
 
-left:-120%;
+    left:-120%;
 
 }
+
 
 
 30%{
 
-left:150%;
+    left:150%;
 
 }
+
 
 
 100%{
 
-left:150%;
+    left:150%;
 
 }
 
 
 }
+
+
+
+
 
 
 
 .proposal-box h1{
 
+
 color:#e91e63;
 
+
 font-family:
+
 "Playfair Display",
+
 serif;
 
+
+
 font-size:
+
 clamp(28px,5vw,42px);
+
+
 
 margin-bottom:15px;
 
+
 }
+
+
+
+
 
 
 
 .proposal-box h2{
 
+
 color:#444;
+
 
 font-size:20px;
 
+
 margin-bottom:12px;
 
+
 }
+
+
+
+
 
 
 
 .proposal-box p{
 
+
 color:#777;
+
 
 line-height:1.6;
 
+
 margin-bottom:25px;
 
+
 }
+
+
+
+
 
 
 
 .proposal-buttons{
 
+
     display:flex;
+
 
     justify-content:center;
 
+
     gap:15px;
 
+
 }
+
+
+
+
+
+
+
+
 
 /* =====================================================
    📅 DATE SCREEN
@@ -803,93 +1069,167 @@ margin-bottom:25px;
 
 .date-screen{
 
+
     width:min(650px,100%);
+
 
     text-align:center;
 
+
     padding:25px;
 
+
     animation:
+
+
     dateEnter .8s ease both;
 
+
 }
+
+
+
+
 
 
 
 @keyframes dateEnter{
 
+
 from{
+
 
 opacity:0;
 
+
 transform:
+
+
 translateY(30px)
+
 scale(.96);
 
+
+
 }
+
 
 
 to{
 
+
 opacity:1;
 
+
 transform:
+
+
 translateY(0)
+
 scale(1);
 
-}
+
 
 }
+
+
+}
+
+
+
+
 
 
 
 .date-icon{
 
+
 font-size:65px;
 
+
 animation:
+
+
 heartBeat 1.5s infinite;
 
+
 }
+
+
+
+
 
 
 
 .date-screen h1{
 
+
 color:#e91e63;
 
+
 font-family:
+
+
 "Playfair Display",
+
 serif;
 
+
+
 font-size:
+
+
 clamp(32px,6vw,52px);
+
+
 
 margin:10px 0;
 
+
 }
+
+
+
+
 
 
 
 .date-screen h2{
 
+
 color:#555;
+
 
 margin-bottom:10px;
 
+
 }
+
+
+
+
 
 
 
 .date-intro{
 
+
 color:#777;
+
 
 line-height:1.6;
 
+
 margin-bottom:25px;
 
+
 }
+
+
+
+
+
+
 
 
 
@@ -900,140 +1240,226 @@ margin-bottom:25px;
 
 .date-box{
 
+
 background:
+
+
 rgba(255,255,255,.94);
+
+
 
 padding:30px;
 
+
 border-radius:25px;
+
+
 
 box-shadow:
 
+
 0 20px 50px
+
 rgba(233,30,99,.14);
 
+
+
 }
+
+
+
+
 
 
 
 .date-box h2{
 
+
 color:#e91e63;
+
 
 margin-bottom:25px;
 
+
 }
+
+
+
+
 
 
 
 .date-box label{
 
+
 display:block;
+
 
 text-align:left;
 
+
 font-size:14px;
+
 
 font-weight:700;
 
+
 color:#555;
 
+
 margin:
+
+
 15px 0 7px;
 
+
 }
+
+
+
+
 
 
 
 .date-box input{
 
+
 width:100%;
+
 
 padding:14px;
 
+
 border:
+
 
 2px solid #f2c4d4;
 
 
+
 border-radius:12px;
+
 
 outline:none;
 
+
 font-size:16px;
 
+
 }
+
+
+
+
 
 
 
 .date-box input:focus{
 
+
 border-color:#e91e63;
 
+
 }
+
+
+
+
 
 
 
 #dateCuteMessage{
 
+
 margin-top:15px;
+
 
 color:#e91e63;
 
+
 font-weight:600;
 
+
 }
+
+
+
 
 
 
 
 .selected-date-preview,
+
 .selected-time{
 
 
 margin-top:15px;
 
+
 padding:15px;
 
+
 background:
+
+
 rgba(233,30,99,.06);
+
+
 
 border-radius:15px;
 
+
 }
+
+
+
+
 
 
 
 .selected-date-preview span,
+
 .selected-time span{
+
 
 display:block;
 
+
 font-size:11px;
+
 
 font-weight:800;
 
+
 color:#e91e63;
+
 
 letter-spacing:1px;
 
+
 }
+
+
+
+
 
 
 
 .selected-date-preview strong,
+
 .selected-time strong{
+
 
 display:block;
 
+
 font-size:17px;
+
 
 color:#333;
 
+
 }
-
-
-
 /* =====================================================
    🎟 DATE PASS
 ===================================================== */
@@ -1041,267 +1467,452 @@ color:#333;
 
 .confirmed-date{
 
-width:min(600px,100%);
+    width:min(600px,100%);
 
-text-align:center;
+    text-align:center;
 
-padding:20px;
+    padding:20px;
 
 }
+
+
+
+
 
 
 
 .date-pass{
 
-position:relative;
 
-overflow:hidden;
-
-padding:30px;
-
-border-radius:22px;
+    position:relative;
 
 
-background:
-
-linear-gradient(
-145deg,
-#fff,
-#fff5f8
-);
+    overflow:hidden;
 
 
-border:
-2px solid
-rgba(233,30,99,.18);
+    padding:30px;
 
 
-box-shadow:
+    border-radius:22px;
 
-0 25px 60px
-rgba(233,30,99,.18);
 
-animation:
 
-ticketDrop 1s ease both;
+
+    background:
+
+
+    linear-gradient(
+
+    145deg,
+
+    #fff,
+
+    #fff5f8
+
+    );
+
+
+
+
+    border:
+
+
+    2px solid
+
+    rgba(233,30,99,.18);
+
+
+
+
+    box-shadow:
+
+
+    0 25px 60px
+
+    rgba(233,30,99,.18);
+
+
+
+
+    animation:
+
+
+    ticketDrop 1s ease both;
+
 
 }
+
+
+
+
 
 
 
 @keyframes ticketDrop{
 
+
 from{
 
-opacity:0;
 
-transform:
-translateY(-60px)
-scale(.8);
+    opacity:0;
+
+
+    transform:
+
+
+    translateY(-60px)
+
+    scale(.8);
+
 
 }
+
 
 
 to{
 
-opacity:1;
 
-transform:
-translateY(0)
-scale(1);
+    opacity:1;
+
+
+    transform:
+
+
+    translateY(0)
+
+    scale(1);
+
 
 }
 
+
 }
+
+
+
 
 
 
 
 .date-pass::before{
 
+
 content:"♥";
+
 
 position:absolute;
 
+
 right:-30px;
+
 
 bottom:-50px;
 
+
 font-size:220px;
+
 
 color:
 
+
 rgba(233,30,99,.04);
 
+
+
 }
+
+
+
+
 
 
 
 .pass-top{
 
+
 display:flex;
+
 
 justify-content:space-between;
 
+
 color:#e91e63;
+
 
 font-size:11px;
 
+
 font-weight:800;
+
 
 margin-bottom:20px;
 
+
+
 }
+
+
+
+
 
 
 
 .pass-heart{
 
+
 font-size:65px;
 
+
 animation:
+
+
 heartBeat 1.5s infinite;
 
+
 }
+
+
+
+
 
 
 
 .date-pass h1{
 
+
 font-family:
+
+
 "Playfair Display",
+
 serif;
 
+
+
 font-size:
+
+
 clamp(32px,7vw,50px);
+
+
 
 color:#e91e63;
 
+
+
 }
+
+
+
+
 
 
 
 .pass-subtitle{
 
+
 color:#777;
+
 
 line-height:1.6;
 
+
 margin:20px 0;
 
+
 }
+
+
+
+
 
 
 
 .pass-line{
 
+
 border-top:
 
+
 1px dashed
+
 rgba(233,30,99,.25);
+
+
 
 margin:20px 0;
 
+
 }
+
+
+
+
 
 
 
 .pass-details{
 
+
 display:flex;
+
 
 flex-direction:column;
 
+
 gap:12px;
+
 
 text-align:left;
 
+
 }
+
+
+
+
 
 
 
 .pass-detail{
 
+
 display:flex;
+
 
 align-items:center;
 
+
 gap:15px;
+
 
 padding:13px;
 
+
 border-left:
+
 
 3px solid #e91e63;
 
+
+
 }
+
+
+
+
 
 
 
 .detail-icon{
 
+
 font-size:25px;
 
+
 }
+
+
+
+
 
 
 
 .pass-detail small{
 
+
 display:block;
+
 
 font-size:10px;
 
+
 color:#999;
 
+
 }
+
+
+
+
 
 
 
 .pass-detail strong{
 
+
 color:#333;
+
 
 font-size:15px;
 
+
 }
+
+
+
+
 
 
 
 .pass-message{
 
+
 color:#666;
+
 
 font-style:italic;
 
+
 line-height:1.6;
+
 
 margin-top:15px;
 
+
 }
+
+
+
+
 
 
 
 .pass-footer{
 
+
 margin-top:25px;
+
 
 padding-top:20px;
 
+
 border-top:
 
+
 1px dashed
+
 rgba(233,30,99,.25);
+
+
 
 color:#e91e63;
 
+
 font-size:11px;
+
 
 display:flex;
 
+
 justify-content:space-between;
 
+
 }
+
+
+
+
 
 
 
@@ -1314,81 +1925,357 @@ justify-content:space-between;
 
 .countdown-box{
 
+
 margin-top:25px;
+
 
 padding:25px;
 
+
 background:white;
+
 
 border-radius:22px;
 
+
 box-shadow:
 
+
 0 15px 35px
+
 rgba(233,30,99,.1);
 
+
+
 }
+
+
+
+
 
 
 
 .countdown-box h2{
 
+
 color:#e91e63;
+
 
 margin-bottom:18px;
 
+
 }
+
+
+
+
 
 
 
 .countdown{
 
+
 display:grid;
 
+
 grid-template-columns:
+
+
 repeat(4,1fr);
+
+
 
 gap:10px;
 
+
 }
+
+
+
+
 
 
 
 .countdown div{
 
+
 padding:13px 5px;
+
 
 background:
 
+
 rgba(233,30,99,.06);
+
+
 
 border-radius:12px;
 
+
 }
+
+
+
+
 
 
 
 .countdown span{
 
+
 display:block;
+
 
 font-size:25px;
 
+
 font-weight:800;
+
 
 color:#e91e63;
 
+
 }
+
+
+
+
 
 
 
 .countdown small{
 
+
 font-size:9px;
+
 
 color:#888;
 
+
 }
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   🎬 BOOKING ANIMATION
+===================================================== */
+
+
+.booking-overlay{
+
+
+position:fixed;
+
+
+inset:0;
+
+
+z-index:99999;
+
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+
+
+background:
+
+
+rgba(255,255,255,.95);
+
+
+
+opacity:0;
+
+
+visibility:hidden;
+
+
+
+transition:.5s ease;
+
+
+
+}
+
+
+
+
+
+
+
+.booking-overlay.show-booking{
+
+
+opacity:1;
+
+
+visibility:visible;
+
+
+}
+
+
+
+
+
+
+
+.booking-content{
+
+
+text-align:center;
+
+
+animation:
+
+
+bookingPop .8s ease;
+
+
+}
+
+
+
+
+
+
+
+.booking-heart{
+
+
+font-size:80px;
+
+
+animation:
+
+
+heartBeat 1.5s infinite;
+
+
+}
+
+
+
+
+
+
+
+.booking-content h1{
+
+
+color:#e91e63;
+
+
+font-family:
+
+
+"Playfair Display",
+
+serif;
+
+
+
+font-size:
+
+
+clamp(30px,6vw,50px);
+
+
+
+}
+
+
+
+
+
+
+
+.booking-content p{
+
+
+color:#777;
+
+
+font-size:18px;
+
+
+margin:20px;
+
+
+}
+
+
+
+
+
+
+
+.booking-hearts{
+
+
+font-size:35px;
+
+
+}
+
+
+
+
+
+@keyframes bookingPop{
+
+
+from{
+
+
+opacity:0;
+
+
+transform:
+
+
+scale(.5);
+
+
+}
+
+
+
+to{
+
+
+opacity:1;
+
+
+transform:
+
+
+scale(1);
+
+
+}
+
+
+
+}
+
+
+
+
 
 
 
@@ -1401,47 +2288,332 @@ color:#888;
 
 .message-page{
 
+
 position:fixed;
+
 
 inset:0;
 
+
 z-index:60000;
 
+
 overflow-y:auto;
+
 
 padding:45px 20px;
 
 
+
+
 display:flex;
+
 
 flex-direction:column;
 
+
 align-items:center;
 
+
 justify-content:center;
+
+
 
 
 text-align:center;
 
 
+
+
 background:
 
+
 linear-gradient(
+
 135deg,
+
 #fff1f6,
+
 #ffe1eb
+
 );
+
+
 
 }
 
 
 
-.message-heart{
+
+
+
+
+.message-page-hearts{
+
 
 font-size:55px;
 
+
 animation:
+
+
 heartBeat 1.5s infinite;
+
+
+}
+
+
+
+
+
+
+
+.message-small-title{
+
+
+color:#e91e63;
+
+
+font-weight:700;
+
+
+letter-spacing:2px;
+
+
+}
+
+
+
+
+
+
+
+.message-page-title{
+
+
+font-family:
+
+
+"Playfair Display",
+
+serif;
+
+
+
+font-size:
+
+
+clamp(28px,6vw,48px);
+
+
+
+color:#333;
+
+
+margin-top:15px;
+
+
+}
+
+
+
+
+
+
+
+.message-page p{
+
+
+line-height:1.6;
+
+
+}
+
+
+
+
+
+
+
+
+
+/* =====================================================
+   ✉️ ENVELOPE
+===================================================== */
+
+
+.envelope-wrapper{
+
+
+width:min(430px,90vw);
+
+
+height:330px;
+
+
+margin:30px auto;
+
+
+display:flex;
+
+
+align-items:flex-end;
+
+
+justify-content:center;
+
+
+}
+
+
+
+
+
+
+
+.envelope{
+
+
+position:relative;
+
+
+width:360px;
+
+
+height:230px;
+
+
+}
+
+
+
+
+
+
+
+.envelope-back{
+
+
+position:absolute;
+
+
+inset:0;
+
+
+background:
+
+
+linear-gradient(
+
+145deg,
+
+#e91e63,
+
+#c2185b
+
+);
+
+
+
+border-radius:8px;
+
+
+}
+
+
+
+
+
+
+
+.letter-paper{
+
+
+position:absolute;
+
+
+left:5%;
+
+
+bottom:8px;
+
+
+width:90%;
+
+
+min-height:205px;
+
+
+padding:25px 20px;
+
+
+background:#fffdf8;
+
+
+border-radius:5px;
+
+
+z-index:2;
+
+
+transition:
+
+
+1.2s ease;
+
+
+}
+/* =====================================================
+   💌 MESSAGE PAGE
+===================================================== */
+
+.message-page{
+
+    position:fixed;
+    inset:0;
+
+    z-index:60000;
+
+    overflow-y:auto;
+
+    padding:45px 20px;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        135deg,
+        #fff1f6,
+        #ffe1eb
+    );
+
+}
+
+
+.message-page-hearts{
+
+    font-size:55px;
+
+    animation:
+    heartBeat 1.5s infinite;
+
+}
+
+
+
+.message-small-title{
+
+    color:#e91e63;
+
+    font-weight:800;
+
+    letter-spacing:2px;
 
 }
 
@@ -1449,16 +2621,16 @@ heartBeat 1.5s infinite;
 
 .message-page-title{
 
-font-family:
-"Playfair Display",
-serif;
+    font-family:
+    "Playfair Display",
+    serif;
 
-font-size:
-clamp(28px,6vw,48px);
+    font-size:
+    clamp(28px,6vw,48px);
 
-color:#333;
+    color:#333;
 
-margin-top:15px;
+    margin-top:15px;
 
 }
 
@@ -1472,17 +2644,17 @@ margin-top:15px;
 
 .envelope-wrapper{
 
-width:min(430px,90vw);
+    width:min(430px,90vw);
 
-height:330px;
+    height:330px;
 
-margin:30px auto;
+    margin:30px auto;
 
-display:flex;
+    display:flex;
 
-align-items:flex-end;
+    align-items:flex-end;
 
-justify-content:center;
+    justify-content:center;
 
 }
 
@@ -1490,11 +2662,11 @@ justify-content:center;
 
 .envelope{
 
-position:relative;
+    position:relative;
 
-width:360px;
+    width:360px;
 
-height:230px;
+    height:230px;
 
 }
 
@@ -1502,47 +2674,48 @@ height:230px;
 
 .envelope-back{
 
-position:absolute;
+    position:absolute;
 
-inset:0;
+    inset:0;
 
-background:
+    background:
 
-linear-gradient(
-145deg,
-#e91e63,
-#c2185b
-);
+    linear-gradient(
+        145deg,
+        #e91e63,
+        #c2185b
+    );
 
-border-radius:8px;
+    border-radius:8px;
 
 }
 
 
 
+
 .letter-paper{
 
-position:absolute;
+    position:absolute;
 
-left:5%;
+    left:5%;
 
-bottom:8px;
+    bottom:8px;
 
-width:90%;
+    width:90%;
 
-min-height:205px;
+    min-height:205px;
 
-padding:25px 20px;
+    padding:25px 20px;
 
-background:#fffdf8;
+    background:#fffdf8;
 
-border-radius:5px;
+    border-radius:5px;
 
-z-index:2;
+    z-index:2;
 
-transition:
 
-1.2s ease;
+    transition:
+    1.2s ease;
 
 }
 
@@ -1550,21 +2723,31 @@ transition:
 
 .letter-content{
 
-opacity:0;
+    opacity:0;
 
-transition:.8s ease;
+    transition:.8s ease;
 
 }
 
 
 
+
+.letter-heart{
+
+    font-size:40px;
+
+}
+
+
+
+
 .letter-content h2{
 
-color:#e91e63;
+    color:#e91e63;
 
-font-family:
-"Playfair Display",
-serif;
+    font-family:
+    "Playfair Display",
+    serif;
 
 }
 
@@ -1572,9 +2755,9 @@ serif;
 
 .letter-content p{
 
-color:#555;
+    color:#555;
 
-line-height:1.6;
+    line-height:1.6;
 
 }
 
@@ -1582,51 +2765,57 @@ line-height:1.6;
 
 .letter-sign{
 
-margin-top:25px;
+    margin-top:25px;
 
-font-family:
-"Dancing Script",
-cursive;
+    font-family:
+    "Dancing Script",
+    cursive;
 
-font-size:28px;
+    font-size:28px;
 
-color:#e91e63;
+    color:#e91e63;
 
-text-align:right;
+    text-align:right;
 
 }
 
 
 
 
+
 .envelope-flap{
 
-position:absolute;
+    position:absolute;
 
-top:0;
+    top:0;
 
-left:0;
+    left:0;
 
-width:100%;
 
-height:58%;
+    width:100%;
 
-background:#f02b70;
+    height:58%;
 
-clip-path:
-polygon(
-0 0,
-100% 0,
-50% 100%
-);
 
-z-index:4;
+    background:#f02b70;
 
-transform-origin:top;
 
-transition:
+    clip-path:
+    polygon(
+        0 0,
+        100% 0,
+        50% 100%
+    );
 
-1s ease;
+
+    z-index:4;
+
+
+    transform-origin:top;
+
+
+    transition:
+    1s ease;
 
 }
 
@@ -1634,29 +2823,70 @@ transition:
 
 .envelope-open .envelope-flap{
 
-transform:
-
-rotateX(180deg);
+    transform:
+    rotateX(180deg);
 
 }
+
 
 
 
 .envelope-open .letter-paper{
 
-transform:
-
-translateY(-120px);
+    transform:
+    translateY(-120px);
 
 }
+
 
 
 
 .envelope-open .letter-content{
 
-opacity:1;
+    opacity:1;
 
 }
+
+
+
+
+
+
+/* =====================================================
+   💌 MESSAGE BUTTONS
+===================================================== */
+
+
+.open-message-button,
+.back-ticket-button{
+
+    margin-top:15px;
+
+    padding:
+
+    14px 28px;
+
+    border-radius:50px;
+
+    background:#e91e63;
+
+    color:white;
+
+    font-weight:700;
+
+}
+
+
+
+.open-message-button:hover,
+.back-ticket-button:hover{
+
+    transform:
+    translateY(-3px);
+
+}
+
+
 
 
 
@@ -1669,94 +2899,130 @@ opacity:1;
 
 body.dark-romance{
 
-background:
 
-radial-gradient(
-circle,
-#3b1024,
-#090306
-);
+    background:
 
-color:white;
+    radial-gradient(
 
-}
+        circle,
+
+        #3b1024,
+
+        #090306
+
+    );
 
 
-
-body.dark-romance .proposal-box,
-body.dark-romance .date-box,
-body.dark-romance .countdown-box{
-
-background:
-
-rgba(35,10,20,.9);
-
-color:white;
+    color:white;
 
 }
 
 
 
-body.dark-romance .message-page{
+body.dark-romance 
+.proposal-box,
 
-background:
 
-linear-gradient(
-135deg,
-#17070e,
-#2b0b19
-);
+body.dark-romance 
+.date-box,
+
+
+body.dark-romance 
+.countdown-box{
+
+
+    background:
+
+    rgba(35,10,20,.9);
+
+
+    color:white;
 
 }
 
 
 
-body.dark-romance .message-page-title{
+body.dark-romance 
+.message-page{
 
-color:white;
+
+    background:
+
+    linear-gradient(
+
+        135deg,
+
+        #17070e,
+
+        #2b0b19
+
+    );
+
 
 }
+
+
+
+
+body.dark-romance 
+.message-page-title{
+
+
+    color:white;
+
+}
+
 
 
 
 
 
 /* =====================================================
-   🌙 BUTTONS
+   🌙 DARK + MUSIC BUTTONS
 ===================================================== */
 
 
 #darkModeButton,
+
 #musicButton{
 
-position:fixed;
 
-top:20px;
+    position:fixed;
 
-z-index:70000;
+    top:20px;
 
-width:45px;
+    z-index:70000;
 
-height:45px;
 
-border-radius:50%;
+    width:45px;
 
-background:white;
+    height:45px;
 
-font-size:20px;
 
-box-shadow:
+    border-radius:50%;
 
-0 5px 20px
-rgba(0,0,0,.1);
+
+    background:white;
+
+
+    font-size:20px;
+
+
+    box-shadow:
+
+    0 5px 20px
+
+    rgba(0,0,0,.1);
+
 
 }
+
 
 
 
 #darkModeButton{
 
-right:20px;
+    right:20px;
 
 }
 
@@ -1764,9 +3030,11 @@ right:20px;
 
 #musicButton{
 
-right:75px;
+    right:75px;
 
 }
+
+
 
 
 
@@ -1782,36 +3050,49 @@ right:75px;
 
 0%,100%{
 
-transform:
-scale(1);
+
+    transform:
+
+    scale(1);
 
 }
+
 
 
 50%{
 
-transform:
-scale(1.12);
+
+    transform:
+
+    scale(1.12);
 
 }
 
+
 }
+
+
+
 
 
 
 
 /* =====================================================
-   📱 MOBILE
+   📱 MOBILE RESPONSIVE
 ===================================================== */
 
 
 @media(max-width:700px){
 
 
+
 .container{
 
-padding:
-20px 12px;
+
+    padding:
+
+    20px 12px;
+
 
 }
 
@@ -1819,9 +3100,12 @@ padding:
 
 .proposal-content{
 
-flex-direction:column;
 
-gap:35px;
+    flex-direction:column;
+
+
+    gap:35px;
+
 
 }
 
@@ -1829,7 +3113,9 @@ gap:35px;
 
 .kitty{
 
-width:170px;
+
+    width:170px;
+
 
 }
 
@@ -1837,7 +3123,11 @@ width:170px;
 
 .proposal-box{
 
-padding:25px 18px;
+
+    padding:
+
+    25px 18px;
+
 
 }
 
@@ -1845,7 +3135,11 @@ padding:25px 18px;
 
 .date-box{
 
-padding:20px 15px;
+
+    padding:
+
+    20px 15px;
+
 
 }
 
@@ -1853,7 +3147,9 @@ padding:20px 15px;
 
 .countdown span{
 
-font-size:18px;
+
+    font-size:18px;
+
 
 }
 
@@ -1861,9 +3157,11 @@ font-size:18px;
 
 .envelope{
 
-width:290px;
 
-height:180px;
+    width:290px;
+
+    height:180px;
+
 
 }
 
@@ -1871,49 +3169,62 @@ height:180px;
 
 .message-page{
 
-justify-content:flex-start;
 
-padding-top:40px;
+    justify-content:flex-start;
+
+    padding-top:40px;
+
 
 }
+
 
 
 #darkModeButton,
+
 #musicButton{
 
-width:38px;
 
-height:38px;
+    width:38px;
 
-top:12px;
+    height:38px;
+
+    top:12px;
+
 
 }
+
 
 
 #darkModeButton{
 
-right:10px;
+    right:10px;
 
 }
+
 
 
 #musicButton{
 
-right:55px;
+    right:55px;
 
 }
 
 
+
 }
+
 
 
 
 @media(max-width:420px){
 
 
+
 .proposal-box h1{
 
-font-size:28px;
+
+    font-size:28px;
+
 
 }
 
@@ -1921,7 +3232,9 @@ font-size:28px;
 
 .kitty{
 
-width:140px;
+
+    width:140px;
+
 
 }
 
@@ -1929,9 +3242,11 @@ width:140px;
 
 .envelope{
 
-width:270px;
 
-height:170px;
+    width:270px;
+
+    height:170px;
+
 
 }
 
