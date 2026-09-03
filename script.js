@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let noCount = 0;
 
-
+    
     // ===============================
     // OPEN HEART SCREEN
     // ===============================
@@ -174,7 +174,7 @@ function showDateScreen(){
 
 
         <h2>
-            Date officially accepted! 🥰
+            Date accepted! 🥰
         </h2>
 
 
@@ -402,7 +402,7 @@ confirmDate.addEventListener("click",()=>{
 if(!dateInput.value || !timeInput.value){
 
 alert(
-"Please select date and time ❤️"
+"Select your fav date and time ❤️"
 );
 
 return;
@@ -455,7 +455,7 @@ overlay.innerHTML = `
 
 <h1>
 OUR DATE IS<br>
-OFFICIALLY BOOKED ❤️
+CONFIRM BOOKED ❤️
 </h1>
 
 
@@ -603,7 +603,7 @@ IT'S A DATE! 🎉
 
 <p class="pass-subtitle">
 
-Officially reserved for two special people 🥰
+hehee reserved for two gud people 🥰
 
 </p>
 
@@ -1094,18 +1094,18 @@ My Little Message ❤️
 
 
 <p>
-I don't need a perfect world.
+btw i does'nt want anything.
 </p>
 
 
 <p>
-I just need beautiful moments with you.
+I just need beautiful moments with uh.
 </p>
 
 
 
 <p>
-Let's create memories together ✨
+so let's create memories together ✨
 </p>
 
 
@@ -1113,7 +1113,7 @@ Let's create memories together ✨
 
 <div class="letter-sign">
 
-— Abhi ❤️
+~ Your Abhi ❤️
 
 </div>
 
