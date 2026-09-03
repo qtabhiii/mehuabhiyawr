@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let noCount = 0;
 
-    
+
     // ===============================
     // OPEN HEART SCREEN
     // ===============================
@@ -341,7 +341,7 @@ msg.innerHTML =
 
 
 
-preview.innerHTML = `
+preview.innerHTML = preview.innerHTML.split('<div class="selected-time">')[0] + `
 
 <span>
 💕 OUR DATE
@@ -369,7 +369,7 @@ document.getElementById("selectedDatePreview");
 
 
 
-preview.innerHTML += `
+preview.innerHTML = preview.innerHTML.split('<div class="selected-time">')[0] + `
 
 <div class="selected-time">
 
