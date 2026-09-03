@@ -2795,7 +2795,7 @@ body.dark-romance #musicButton {
         width:160px;
 
     }
-    
+
     .kitty-bubble{
 
     font-size:14px;
@@ -2829,4 +2829,192 @@ body.dark-romance #musicButton {
 
 
 
+}
+/* ===================================
+   🎉 YES CELEBRATION
+=================================== */
+
+.yes-celebration{
+
+    position:fixed;
+    inset:0;
+    z-index:90000;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+
+    background:
+    rgba(255,240,245,0.92);
+
+    animation:
+    celebrationIn 0.8s ease both;
+
+}
+
+
+.yes-celebration h1{
+
+    color:#e91e63;
+
+    font-family:
+    "Playfair Display",serif;
+
+    font-size:
+    clamp(35px,7vw,60px);
+
+    text-align:center;
+
+}
+
+
+
+.yes-celebration p{
+
+    margin-top:15px;
+
+    color:#555;
+
+    font-size:20px;
+
+}
+
+
+
+@keyframes celebrationIn{
+
+
+from{
+
+opacity:0;
+transform:scale(0.7);
+
+}
+
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+
+
+
+/* 🎊 CONFETTI */
+
+.confetti{
+
+    position:fixed;
+
+    top:-20px;
+
+    font-size:25px;
+
+    z-index:90001;
+
+    animation:
+    confettiFall 3s linear forwards;
+
+}
+
+
+@keyframes confettiFall{
+
+
+to{
+
+    transform:
+    translateY(110vh)
+    rotate(720deg);
+
+    opacity:0;
+
+}
+
+}
+/* QUICK DATE BUTTONS */
+
+.date-suggestions{
+    margin-bottom:20px;
+}
+
+
+.date-suggestions h3{
+    color:#e91e63;
+    font-size:16px;
+    margin-bottom:15px;
+}
+
+
+.quick-date{
+
+    padding:10px 15px;
+    margin:5px;
+
+    border-radius:50px;
+
+    background:#fff0f5;
+    color:#e91e63;
+
+    font-weight:700;
+
+    border:1px solid rgba(233,30,99,0.2);
+
+    cursor:pointer;
+
+}
+
+
+.quick-date:hover{
+
+    transform:translateY(-3px);
+
+    background:#e91e63;
+
+    color:white;
+
+}
+.quick-date-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 10px 0 15px;
+}
+
+.quick-date-btn {
+    min-height: 44px;
+    padding: 10px 12px;
+
+    border: 2px solid #f2c4d4;
+    border-radius: 12px;
+
+    background: white;
+    color: #e91e63;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.quick-date-btn:hover {
+    background: rgba(233, 30, 99, 0.08);
+    border-color: #e91e63;
+}
+
+.quick-date-btn.active {
+    background: #e91e63;
+    border-color: #e91e63;
+    color: white;
+
+    box-shadow:
+        0 7px 18px rgba(233, 30, 99, 0.25);
+}
+
+@media (max-width: 450px) {
+    .quick-date-buttons {
+        grid-template-columns: 1fr;
+    }
 }

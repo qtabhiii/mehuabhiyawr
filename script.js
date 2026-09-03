@@ -52,6 +52,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
 
+            showYesCelebration();
+
             if(kittyBubble){
 
     kittyBubble.innerHTML =
@@ -61,6 +63,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             createHearts();
+
+            showYesCelebration();
 
 
             setTimeout(()=>{
@@ -219,6 +223,10 @@ if(noButton){
 
 function showDateScreen(){
 
+    alert("DATE SCREEN OPENING");
+
+    console.log("DATE SCREEN OPENING");
+
     const container = document.querySelector(".container");
 
     if(!container) return;
@@ -256,14 +264,62 @@ function showDateScreen(){
             </h2>
 
 
-            <label>
-                Choose Date
-            </label>
+            <div class="date-suggestions">
+
+<h3>
+💕 Pick a cute option
+</h3>
 
 
-            <input 
-            type="date"
-            id="dateInput">
+<button class="quick-date" data-day="1">
+Tomorrow ❤️
+</button>
+
+
+<button class="quick-date" data-day="3">
+In 3 Days 🌸
+</button>
+
+
+<button class="quick-date" data-day="7">
+Next Week ✨
+</button>
+
+
+<button class="quick-date" data-day="0">
+Surprise Me 🎁
+</button>
+
+
+</div>
+
+
+
+<label>
+    Choose Date
+</label>
+
+<div class="quick-date-buttons">
+    <button type="button" class="quick-date-btn" data-days="0">
+        Today
+    </button>
+
+    <button type="button" class="quick-date-btn" data-days="1">
+        Tomorrow
+    </button>
+
+    <button type="button" class="quick-date-btn" data-date-option="weekend">
+        This Weekend
+    </button>
+
+    <button type="button" class="quick-date-btn" data-days="7">
+        Next Week
+    </button>
+</div>
+
+<input 
+type="date"
+id="dateInput">
 
 
 
@@ -366,6 +422,80 @@ document.getElementById("confirmDate");
 
 if(!dateInput || !timeInput || !confirmDate)
 return;
+
+const quickDateButtons =
+document.querySelectorAll(".quick-date-btn");
+
+
+function formatDateForInput(date){
+
+    const year = date.getFullYear();
+
+    const month =
+    String(date.getMonth() + 1).padStart(2, "0");
+
+    const day =
+    String(date.getDate()).padStart(2, "0");
+
+    return `${year}-${month}-${day}`;
+
+}
+
+
+quickDateButtons.forEach((button)=>{
+
+    button.addEventListener("click",()=>{
+
+        const selectedDate = new Date();
+
+        selectedDate.setHours(12, 0, 0, 0);
+
+
+        if(button.dataset.dateOption === "weekend"){
+
+            const currentDay = selectedDate.getDay();
+
+            // Aane wala Saturday select hoga
+            let daysUntilSaturday =
+            (6 - currentDay + 7) % 7;
+
+            // Agar aaj Saturday hai toh aaj hi select hoga
+            selectedDate.setDate(
+                selectedDate.getDate() + daysUntilSaturday
+            );
+
+        } else {
+
+            const daysToAdd =
+            Number(button.dataset.days || 0);
+
+            selectedDate.setDate(
+                selectedDate.getDate() + daysToAdd
+            );
+
+        }
+
+
+        dateInput.value =
+        formatDateForInput(selectedDate);
+
+
+        // Existing date preview/message bhi update hoga
+        dateInput.dispatchEvent(
+            new Event("change", { bubbles: true })
+        );
+
+
+        quickDateButtons.forEach((item)=>{
+            item.classList.remove("active");
+        });
+
+        button.classList.add("active");
+
+    });
+
+});
+
 
 
 
@@ -1412,6 +1542,85 @@ heart.remove();
 
 }
 
+// =========================================
+// 🎉 YES CELEBRATION
+// =========================================
+
+function showYesCelebration(){
+
+
+const box =
+document.createElement("div");
+
+
+box.className="yes-celebration";
+
+
+box.innerHTML=`
+
+<h1>
+YAYYYYY ❤️🥰
+</h1>
+
+<p>
+Kitty knew you would choose me 🐱💕
+</p>
+
+`;
+
+
+document.body.appendChild(box);
+
+
+
+for(let i=0;i<40;i++){
+
+
+let confetti =
+document.createElement("div");
+
+
+confetti.className="confetti";
+
+
+confetti.innerHTML =
+["❤️","💕","✨","🌸","💖"]
+[Math.floor(Math.random()*5)];
+
+
+confetti.style.left =
+Math.random()*100+"vw";
+
+
+confetti.style.animationDelay =
+Math.random()*2+"s";
+
+
+document.body.appendChild(confetti);
+
+
+
+setTimeout(()=>{
+
+confetti.remove();
+
+},3000);
+
+
+
+}
+
+
+
+setTimeout(()=>{
+
+box.remove();
+
+},2500);
+
+
+
+}
 
 
 
