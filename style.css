@@ -278,6 +278,104 @@ button:active {
     align-items: center;
     justify-content: center;
 }
+/* ===================================
+   🐱 KITTY SPEECH BUBBLE
+=================================== */
+
+
+.kitty-area{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+
+
+.kitty-bubble{
+
+    position:relative;
+
+    background:white;
+
+    color:#e91e63;
+
+    padding:15px 20px;
+
+    border-radius:20px;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    text-align:center;
+
+    width:max-content;
+
+    max-width:220px;
+
+    box-shadow:
+    0 10px 25px rgba(233,30,99,0.15);
+
+
+    animation:
+    bubbleFloat 2s ease-in-out infinite;
+
+}
+
+
+
+/* bubble ka neeche wala triangle */
+
+.kitty-bubble::after{
+
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-12px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+
+    border-width:12px 12px 0 12px;
+
+    border-style:solid;
+
+    border-color:white transparent transparent transparent;
+
+
+}
+
+
+
+@keyframes bubbleFloat{
+
+
+    0%,
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+
+}
 
 .kitty {
     width: 240px;
@@ -2694,9 +2792,16 @@ body.dark-romance #musicButton {
 
     .kitty{
 
-        width:140px;
+        width:160px;
 
     }
+    
+    .kitty-bubble{
+
+    font-size:14px;
+    max-width:180px;
+
+}
 
 
 
