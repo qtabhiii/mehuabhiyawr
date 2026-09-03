@@ -2,6 +2,45 @@ document.addEventListener("DOMContentLoaded", () => {
 
     console.log("KITTY JS LOADED");
 
+    // ===============================
+// NAME SCREEN
+// ===============================
+const nameScreen  = document.getElementById("nameScreen");
+const nameSubmit  = document.getElementById("nameSubmit");
+const nameInput   = document.getElementById("userNameInput");
+const nameError   = document.getElementById("nameError");
+
+window.userName = "";
+
+function submitName(){
+  const value = (nameInput.value || "").trim();
+
+  if(value.length < 2){
+    nameError.textContent = "Please apna naam likho 🥺";
+    return;
+  }
+  if(value.length > 30){
+    nameError.textContent = "Naam thoda chhota likho 😅";
+    return;
+  }
+
+  nameError.textContent = "";
+  window.userName = value;
+  localStorage.setItem("userName", value);
+
+  nameScreen.classList.add("name-hidden");
+  setTimeout(() => { nameScreen.style.display = "none"; }, 600);
+}
+
+if(nameSubmit && nameInput){
+  nameSubmit.addEventListener("click", submitName);
+  nameInput.addEventListener("keydown", (e) => {
+    if(e.key === "Enter") submitName();
+  });
+  setTimeout(() => nameInput.focus(), 400);
+}
+
+
     const openingScreen = document.getElementById("openingScreen");
     const enterButton = document.getElementById("enterButton");
 
@@ -223,7 +262,6 @@ if(noButton){
 
 function showDateScreen(){
 
-    alert("DATE SCREEN OPENING");
 
     console.log("DATE SCREEN OPENING");
 
@@ -612,7 +650,7 @@ dateInput.value;
 window.savedTime =
 timeInput.value;
 
-
+sendToWhatsApp(dateInput.value, timeInput.value);
 
 showBookingAnimation();
 
@@ -1727,4 +1765,35 @@ musicButton.innerHTML="🎵";
 
 
 // CLOSE DOM CONTENT
+
+// =========================================
+// 📲 SEND TO MY WHATSAPP
+// =========================================
+
+function sendToWhatsApp(date, time) {
+  // ✅ India number: 91 (country code) + 8505946172
+  const MY_NUMBER = "9198505946172";
+
+  const name = window.userName || localStorage.getItem("userName") || "Someone";
+
+  const prettyDate = new Date(date).toLocaleDateString("en-US", {
+    weekday: "long",
+    day: "numeric",
+    month: "long",
+    year: "numeric"
+  });
+
+  const text =
+    "💖 NEW DATE BOOKED 💖\n\n" +
+    "👤 Name: " + name + "\n" +
+    "📅 Date: " + prettyDate + "\n" +
+    "⏰ Time: " + time + "\n\n" +
+    "Booked from your website ❤️";
+
+  window.open(
+    "https://wa.me/" + MY_NUMBER + "?text=" + encodeURIComponent(text),
+    "_blank"
+  );
+}
+
 });
