@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    console.log("KITTY JS LOADED");
+
     const openingScreen = document.getElementById("openingScreen");
     const enterButton = document.getElementById("enterButton");
 
@@ -83,6 +85,8 @@ if(noButton){
 
 
     noButton.addEventListener("click",()=>{
+
+        console.log("NO CLICK WORKING");
 
 
         noCount++;
