@@ -8,6 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const kitty = document.querySelector(".kitty");
 
+    const kittyBubble = document.getElementById("kittyBubble");
+
     let noCount = 0;
 
 
@@ -48,11 +50,22 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
 
+            if(kittyBubble){
+
+    kittyBubble.innerHTML =
+    "I knew you would say YES 😍❤️";
+
+}
+
 
             createHearts();
 
 
-            showDateScreen();
+            setTimeout(()=>{
+
+    showDateScreen();
+
+},1200);
 
 
         });
@@ -63,64 +76,111 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ===============================
-    // NO BUTTON
-    // ===============================
+// NO BUTTON
+// ===============================
 
-    if(noButton){
-
-
-        noButton.addEventListener("click",()=>{
+if(noButton){
 
 
-            noCount++;
+    noButton.addEventListener("click",()=>{
 
 
-            if(noCount===1){
+        noCount++;
 
-                noButton.innerHTML="Please babe 🥺";
 
-            }
+        if(noCount===1){
 
-            else if(noCount===2){
+            noButton.innerHTML="Please babe 🥺";
 
-                noButton.innerHTML="Think again 😭";
 
-            }
+            if(kittyBubble){
 
-            else if(noCount===3){
-
-                noButton.innerHTML="Choose YES ❤️";
+                kittyBubble.innerHTML =
+                "No no... don't break my heart 😭💔";
 
             }
 
-            else if(noCount>=4){
-
-                noButton.innerHTML="Catch me 😂";
-
-                moveNoButton();
-
-            }
+        }
 
 
 
-            if(kitty){
+        else if(noCount===2){
 
-                kitty.classList.remove("kitty-sad");
 
-                void kitty.offsetWidth;
+            noButton.innerHTML="Think again 😭";
 
-                kitty.classList.add("kitty-sad");
+
+            if(kittyBubble){
+
+                kittyBubble.innerHTML =
+                "Are you sure? Kitty is crying 🥺🐱";
 
             }
 
 
-
-        });
-
+        }
 
 
-    }
 
+
+        else if(noCount===3){
+
+
+            noButton.innerHTML="Choose YES ❤️";
+
+
+            if(kittyBubble){
+
+                kittyBubble.innerHTML =
+                "Please choose YES... I am waiting 🥺❤️";
+
+            }
+
+
+        }
+
+
+
+
+
+        else if(noCount>=4){
+
+
+            noButton.innerHTML="Catch me 😂";
+
+
+            if(kittyBubble){
+
+                kittyBubble.innerHTML =
+                "Okay I will catch that NO 😂🐱";
+
+            }
+
+
+            moveNoButton();
+
+
+        }
+
+
+
+
+        if(kitty){
+
+            kitty.classList.remove("kitty-sad");
+
+            void kitty.offsetWidth;
+
+            kitty.classList.add("kitty-sad");
+
+        }
+
+
+
+    });
+
+
+}
 
 
 
